@@ -1,0 +1,49 @@
+@import './typography.css';
+
+:root {
+    font-family: IranSans;
+}
+
+[data-theme='dark'] {
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    font-family: IranSans !important;
+    direction: rtl !important;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-none {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+}
