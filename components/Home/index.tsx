@@ -15,6 +15,16 @@ import User1 from '@assets/svg/shopify/user1.svg';
 import User2 from '@assets/svg/shopify/user2.svg';
 import Tik from '@assets/svg/shopify/tik.svg';
 import Close from '@assets/svg/shopify/close.svg';
+import Cart1 from '@assets/svg/shopify/cart1.svg';
+import Cart2 from '@assets/svg/shopify/cart2.svg';
+import Cart3 from '@assets/svg/shopify/cart3.svg';
+import Cart4 from '@assets/svg/shopify/cart4.svg';
+import Tik1 from '@assets/svg/shopify/tik1.svg';
+import Line1 from '@assets/svg/shopify/line1.svg';
+import Line2 from '@assets/svg/shopify/line2.svg';
+import Footer_User from '@assets/svg/shopify/footer-user.svg';
+import GooglePlay from '@assets/svg/shopify/googleplay.svg';
+import AppleStore from '@assets/svg/shopify/applestore.svg';
 
 export default function index() {
     const [page, setPage] = useState<string>('p');
@@ -112,13 +122,14 @@ export default function index() {
                     </div>
                 </div>
                 <div className="h-96 w-1/2">
-                    <img className="w-64 mr-60" src="/images/screen.png" alt="" />
+                    <video className="w-64 mr-52" src="/video/video.mp4" controls />
+                    {/* <img className="w-64 mr-60" src="/images/screen.png" alt="" /> */}
                 </div>
             </div>
-            <div style={{ backgroundColor: '#F2F5F9' }}>
-                <div className="-mt-10">
+            <div style={{ backgroundColor: '#F2F5F9' }} className="h-auto">
+                <div className="-mt-9">
                     <div className="flex justify-center mt-10">
-                        <div>
+                        <div className="mt-5">
                             <p className="text-xs">برخی از</p>
                         </div>
                     </div>
@@ -294,6 +305,179 @@ export default function index() {
                         </div>
                     </div>
                 </div>
+                <div className="h-screen ">
+                    <div className="flex mt-28 px-32">
+                        <div className=" h-72 w-1/2 mt-10">
+                            <p className="text-lg">سادگی خرید فقط با 3 حرکت</p>
+                            <p className="mt-3 text-sm opacity-80">{data.titlePageFive}</p>
+                            <div className="mt-28">
+                                <div className="flex">
+                                    <Tik1 className="w-7" />
+                                    <p className="mt-2 text-xs opacity-80 mr-3">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                                    </p>
+                                </div>
+                                <div className="flex mt-3">
+                                    <Tik1 className="w-7" />
+
+                                    <p className="mt-2 text-xs opacity-80 mr-3">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                                    </p>
+                                </div>
+                                <div className="flex mt-3">
+                                    <Tik1 className="w-7" />
+
+                                    <p className="mt-2 text-xs opacity-80 mr-3">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                                    </p>
+                                </div>
+                                <div className="flex mt-3">
+                                    <Tik1 className="w-7" />
+
+                                    <p className="mt-2 text-xs opacity-80 mr-3">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                                    </p>
+                                </div>
+                                <div className="flex mt-3">
+                                    <Tik1 className="w-7" />
+                                    <p className="mt-2 text-xs opacity-80 mr-3">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                                    </p>
+                                </div>
+                                <div className="mt-28">
+                                    <button className="text-white bg-green-550 rounded-full p-2 w-40">
+                                        دانلود شاپیفای
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-1/2">
+                            <div className="flex justify-center">
+                                <div className="rounded-r-3xl w-20 h-40 bg-blue-400 flex items-center justify-center">
+                                    <Cart1 className="w-14" />
+                                </div>
+                                <div className="rounded-l-3xl bg-white w-96 h-40">
+                                    <div className="flex justify-center">
+                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                    </div>
+                                    <div className="p-5">
+                                        <p className=" text-xs text-center opacity-80">
+                                            {data.cartText}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className=" flex justify-center -mt-5">
+                                <Line1 />
+                            </div>
+                            <div className="flex justify-center -mt-5">
+                                <div className="rounded-r-3xl bg-white w-96 h-40">
+                                    <div className="flex justify-center">
+                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                    </div>
+                                    <div className="p-5">
+                                        <p className=" text-xs text-center opacity-80">
+                                            {data.cartText}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="rounded-l-3xl w-20 h-40 bg-green-400 flex items-center justify-center">
+                                    <Cart3 className="w-14" />
+                                </div>
+                            </div>
+                            <div className=" flex justify-center -mt-5">
+                                <Line2 />
+                            </div>
+                            <div className="flex justify-center">
+                                <div className="rounded-r-3xl w-20 h-40 bg-blue-400 flex items-center justify-center">
+                                    <Cart4 className="w-14" />
+                                </div>
+                                <div className="rounded-l-3xl bg-white w-96 h-40">
+                                    <div className="flex justify-center">
+                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                    </div>
+                                    <div className="p-5">
+                                        <p className=" text-xs text-center opacity-80">
+                                            {data.cartText}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-36 px-48 ">
+                    <div style={{ backgroundColor: '#20AFFF' }} className=" flex rounded-3xl">
+                        <div className="h-80 w-1/2 blue-500">
+                            <div className="flex absolute">
+                                <Footer_User className="-mt-16" />
+                            </div>
+                        </div>
+                        <div className="w-1/2  h-80">
+                            <div>
+                                <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
+                                <p className="text-white text-xs mt-3">
+                                    !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
+                                </p>
+                            </div>
+                            <div className="flex mt-6">
+                                <div>
+                                    <p className="text-white text-xs">نسخه ی اندروید</p>
+                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                        <GooglePlay className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                        <GooglePlay className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                        <GooglePlay className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                </div>
+                                <div className="mr-10">
+                                    <p className="text-white text-xs">نسخه ی IOS</p>
+                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                        <AppleStore className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                        <AppleStore className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                        <AppleStore className="ml-3" />
+                                        <p className="text-xs text-white ">دریافت از google play</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-20 px-48">
+                    <div className="flex justify-around text-xs">
+                        <p>شبکه های اجتماعی</p>
+                        <p>پشتیبانی</p>
+                        <p>لینک های مهم</p>
+                    </div>
+                    <div className="flex justify-around mt-10 text-xs">
+                        <div>icons</div>
+                        <p>گفتگو با پشتیبانی انلاین</p>
+                        <div className="flex justify-around text-xs">
+                            <p className="mr-5">دانلود شاپیفای</p>
+                            <p className="mr-5">صفحه ی اصلی </p>
+                            <p className="mr-5">قوانین و مقررات</p>
+                        </div>
+                    </div>
+                    <hr className="border-2 border-gray-200 bg-gray-200 mt-10" />
+                    <div className="mt-7 flex justify-center">
+                        <p className="text-sm">
+                            © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.
+                        </p>
+                    </div>
+                </div>
+                <div className="h-10"></div>
             </div>
         </>
     );
