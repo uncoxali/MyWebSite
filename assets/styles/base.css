@@ -1,7 +1,7 @@
 @import './typography.css';
 
 :root {
-    font-family: IranSans;
+    font-family: BYekan;
 }
 
 [data-theme='dark'] {
@@ -25,7 +25,7 @@ html {
 
 html,
 body {
-    font-family: IranSans !important;
+    font-family: BYekan !important;
     direction: rtl !important;
 }
 

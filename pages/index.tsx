@@ -1,12 +1,14 @@
 import { Layout } from '@components/common';
 import { FC } from 'react';
 
-const Home: FC = () => {
+import Home from './home';
+
+const IndexPage: FC = () => {
     return (
-        <Layout title="kookbaz" footer banner searchBar selected="home">
-            <div className="bg-indigo-500 min-h-screen text-center">home page</div>
-        </Layout>
+        <div>
+            <Home />
+        </div>
     );
 };
 
-export default Home;
+export default IndexPage;

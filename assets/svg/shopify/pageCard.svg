@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="561.85" height="605.455" viewBox="0 0 561.85 605.455">
+  <defs>
+    <filter id="Path_2147" x="24.85" y="24.378" width="513.979" height="548.622" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#38ccbb" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3263" data-name="Group 3263" transform="translate(-237.15 -1846)">
+    <g id="Path_2133" data-name="Path 2133" transform="translate(356.708 1854.379)" fill="#fff">
+      <path d="M242-8.379Z" stroke="none"/>
+      <path d="M 203.4177551269531 -8.37890625 L 280.582275390625 -8.37890625 L 203.4177551269531 -8.37890625 Z" stroke="none" fill="#707070"/>
+    </g>
+    <path id="Path_2134" data-name="Path 2134" d="M528.453,326h0Z" transform="translate(270.547 2125.455)" fill="#8a95ad" opacity="0.275"/>
+    <g id="Group_3262" data-name="Group 3262">
+      <g id="Group_3218" data-name="Group 3218" transform="translate(123.844 1237.338)">
+        <path id="Path_2143" data-name="Path 2143" d="M-125.488,15129.494H-296.732s34.915,34.733,80.137,34.733S-125.488,15129.494-125.488,15129.494Z" transform="translate(592.766 -13961.766)" fill="#3acfb3"/>
+        <path id="Path_2144" data-name="Path 2144" d="M-432.245,14837.135v144.459s-35.448-36.543-35.448-72.844S-432.245,14837.135-432.245,14837.135Z" transform="translate(581 -13959.298)" fill="#20afff"/>
+        <path id="Path_2145" data-name="Path 2145" d="M-38.942,14609.191h-142.83s44.126-35.873,81.771-35.873S-38.942,14609.191-38.942,14609.191Z" transform="translate(584.732 -13962.304)" fill="#3acfb3"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 237.15, 1846)" filter="url(#Path_2147)">
+        <path id="Path_2147-2" data-name="Path 2147" d="M25.619,0H470.36a25.445,25.445,0,0,1,25.619,25.268V505.354a25.445,25.445,0,0,1-25.619,25.268H25.619A25.445,25.445,0,0,1,0,505.354V25.268A25.445,25.445,0,0,1,25.619,0Z" transform="translate(33.85 30.38)" fill="#eff8f7"/>
+      </g>
+    </g>
+  </g>
+</svg>
