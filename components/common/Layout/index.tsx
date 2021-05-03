@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
 
-import ShoppingIcon from '@assets/svg/shoppingIcon.svg';
+// import ShoppingIcon from '@assets/svg/shoppingIcon.svg';
 import SearchBar from '../SearchBar';
 import Footer from '../Footer';
 
@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({
                 {banner && (
                     <div className="w-full justify-center flex items-center px-3 py-3 text-white  bg-green-550">
                         <div className="flex justify-center items-center ">
-                            <ShoppingIcon className="w-6 -mt-1 h-6" fill="white" />
+                            {/* <ShoppingIcon className="w-6 -mt-1 h-6" fill="white" /> */}
                             <div className="font-bold text-base mr-2">فروشگاه آنلاین</div>
                         </div>
                     </div>
