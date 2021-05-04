@@ -25,6 +25,7 @@ import Line2 from '@assets/svg/shopify/line2.svg';
 import Footer_User from '@assets/svg/shopify/footer-user.svg';
 import GooglePlay from '@assets/svg/shopify/googleplay.svg';
 import AppleStore from '@assets/svg/shopify/applestore.svg';
+import Youbube from '@assets/svg/icons/youtube.svg';
 
 export default function index() {
     const [page, setPage] = useState<string>('p');
@@ -46,13 +47,17 @@ export default function index() {
 
     return (
         <>
-            <div style={Style} className="p-32 flex justify-center mt-8">
-                <div className={`h-96 w-1/2 mt-28 ${page == 'p' ? 'block' : 'hidden'}`}>
-                    <p className="text-indigo-400 text-4xl">تغییر کن تا آیندرو حس کنی </p>
-                    <p className="mt-8">{data.titlePageOne}</p>
+            <div style={Style} className="lg:p-32 lg:flex lg:justify-center lg:mt-8 w-full">
+                <div className={`lg:h-96 lg:w-1/2 mt-10 p-5 ${page == 'p' ? 'block' : 'hidden'}`}>
+                    <p className="lg:text-indigo-400 lg:text-4xl text-2xl">
+                        تغییر کن تا آیندرو حس کنی{' '}
+                    </p>
+                    <p className="mt-8 lg:text-sm text-xs flex justify-center">
+                        {data.titlePageOne}
+                    </p>
                     <div className="mt-10 flex justify-between">
                         <div>
-                            <button className="text-white bg-green-550 rounded-full p-2 w-40">
+                            <button className="text-white bg-green-550 rounded-full p-2 w-40 lg:block md:block hidden">
                                 دانلود شاپیفای
                             </button>
                         </div>
@@ -84,12 +89,18 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className={`h-96 w-1/2 mt-28 ${page == 'p1' ? 'block' : 'hidden'}`}>
-                    <p className="text-indigo-400 text-4xl">تغییر کن تا آیندرو حس کنی </p>
+                <div
+                    className={`lg:h-96 lg:w-1/2 lg:mt-10 p-5 mt-10 ${
+                        page == 'p1' ? 'block' : 'hidden'
+                    }`}
+                >
+                    <p className="lg:text-indigo-400 lg:text-4xl text-2xl">
+                        تغییر کن تا آیندرو حس کنی{' '}
+                    </p>
                     <p className="mt-8">{data.titlePageTwo}</p>
                     <div className="mt-10 flex justify-between">
                         <div>
-                            <button className="text-white bg-green-550 rounded-full p-2 w-40">
+                            <button className="text-white bg-green-550 rounded-full p-2 w-40 lg:block md:block hidden">
                                 دانلود شاپیفای
                             </button>
                         </div>
@@ -121,13 +132,13 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className="h-96 w-1/2">
-                    <video className="w-64 mr-52" src="/video/video.mp4" controls />
-                    {/* <img className="w-64 mr-60" src="/images/screen.png" alt="" /> */}
+                <div className="h-96 lg:w-1/2 flex justify-center">
+                    <img className="w-64 lg:mr-60" src="/images/video.gif" alt="" />
                 </div>
             </div>
+
             <div style={{ backgroundColor: '#F2F5F9' }} className="h-auto">
-                <div className="-mt-9">
+                <div className="-mt-9 lg:block md:block hidden">
                     <div className="flex justify-center mt-10">
                         <div className="mt-5">
                             <p className="text-xs">برخی از</p>
@@ -202,28 +213,28 @@ export default function index() {
                     </div>
                 </div>
 
-                <div className="mt-28 p-10">
-                    <div className="flex px-16 justify-around">
-                        <div className="w-1/2 mt-24">
+                <div className="lg:mt-28 lg:p-10">
+                    <div className="lg:flex lg:px-16 p-5 lg:justify-around">
+                        <div className="lg:w-1/2 mt-24">
                             <p className="text-xl">سادگی خرید فقط با 3 حرکت</p>
-                            <p className="mt-10">{data.titlePageThree}</p>
-                            <p className="opacity-70 mt-10">اطلاعات بیشتر</p>
+                            <p className="mt-10 lg:text-base text-sm">{data.titlePageThree}</p>
+                            <p className="opacity-70 mt-10 text-xs">اطلاعات بیشتر</p>
                         </div>
-                        <div className="-mt-14">
+                        <div className="-mt-14 flex justify-center">
                             <PageCard className="w-72" />
                         </div>
                     </div>
                 </div>
 
-                <div className="px-28">
+                <div className="lg:px-28">
                     <div className="flex justify-center">
                         <p className="text-sm opacity-70">مهمترین مزایا</p>
                     </div>
                     <div className="flex justify-center">
                         <p className="text-xl">سرویس های شاپیفای</p>
                     </div>
-                    <div className="flex justify-between mt-16 px-32">
-                        <div className="bg-white w-72 h-72  rounded-lg">
+                    <div className="lg:flex justify-between mt-16 lg:px-32 px-12">
+                        <div className="bg-white w-72 h-72  rounded-lg mt-5 shadow-2xl">
                             <div className="flex justify-center">
                                 <div className="w-16 h-16 rounded-full bg-blue-300 mt-10"></div>
                             </div>
@@ -236,7 +247,7 @@ export default function index() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-white w-72 h-72  rounded-lg">
+                        <div className="bg-white w-72 h-72  rounded-lg mt-5 shadow-2xl">
                             <div className="flex justify-center">
                                 <div className="w-16 h-16 rounded-full bg-blue-300 mt-10"></div>
                             </div>
@@ -249,7 +260,7 @@ export default function index() {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-white w-72 h-72  rounded-lg">
+                        <div className="bg-white w-72 h-72  rounded-lg mt-5 shadow-2xl">
                             <div className="flex justify-center">
                                 <div className="w-16 h-16 rounded-full bg-blue-300 mt-10"></div>
                             </div>
@@ -264,40 +275,46 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-32">
-                    <div className="flex justify-center">
-                        <p className="text-sm opacity-70">چرا بی استفاده</p>
-                    </div>
-                    <div className="flex justify-center">
-                        <p>سرویس هاس شاپیفای</p>
-                    </div>
-                    <div className="flex justify-center">
-                        <Service className="mt-2" />
-                        <div className="flex absolute mt-36">
-                            <User1 />
-                            <User1 />
+                <div className="lg:mt-32 mt-20 ">
+                    <div className="">
+                        <div className="flex justify-center">
+                            <p className="text-sm opacity-70">چرا بی استفاده</p>
+                        </div>
+                        <div className="flex justify-center">
+                            <p>سرویس هاس شاپیفای</p>
                         </div>
                     </div>
-                    <div className=" px-32 mt-16">
+                    <div className="flex justify-center lg:mt-0 -mt-32">
+                        <Service className="mt-2 px-5" />
+                        <div className="flex absolute lg:mt-36 mt-20">
+                            <User1 className="w-32 lg:w-80" />
+                            <User1 className="w-32 lg:w-80" />
+                        </div>
+                    </div>
+                    <div className=" lg:px-32 lg:mt-16 -mt-48">
                         <div className="flex justify-between">
-                            <div className="w-1/2 px-20">
+                            <div className="w-1/2 lg:px-20 p-3">
                                 <div className="flex justify-center">
-                                    <p className="text-lg font-bold text-green-550">
+                                    <p className="lg:text-lg font-bold text-green-550">
                                         فروش با استفاده از لینستو
                                     </p>
                                 </div>
-                                <p className="mt-6 text-sm">{data.titlePageFour}</p>
+                                <p className="mt-6 lg:text-sm text-xs text-center">
+                                    {data.titlePageFour}
+                                </p>
                                 <div className="mt-16 flex justify-center">
                                     <Tik />
                                 </div>
                             </div>
-                            <div className="w-1/2 px-20">
+                            <div className="w-1/2 lg:px-20 p-3">
                                 <div className="flex justify-center">
-                                    <p className="text-lg font-bold text-green-550">
+                                    <p className="lg:text-lg font-bold text-green-550">
                                         فروش با استفاده از لینستو
                                     </p>
                                 </div>
-                                <p className="mt-6 text-sm">{data.titlePageFour}</p>
+                                <p className="mt-6 lg:text-sm text-xs text-center">
+                                    {data.titlePageFour}
+                                </p>
                                 <div className="mt-16 flex justify-center">
                                     <Close />
                                 </div>
@@ -305,12 +322,16 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className="h-screen ">
-                    <div className="flex mt-28 px-32">
-                        <div className=" h-72 w-1/2 mt-10">
-                            <p className="text-lg">سادگی خرید فقط با 3 حرکت</p>
-                            <p className="mt-3 text-sm opacity-80">{data.titlePageFive}</p>
-                            <div className="mt-28">
+                <div className=" ">
+                    <div className="lg:flex mt-28 lg:px-24 ">
+                        <div className=" h-72 lg:w-1/2 lg:mt-10 p-3">
+                            <div className="flex justify-center">
+                                <p className="text-lg">سادگی خرید فقط با 3 حرکت</p>
+                            </div>
+                            <p className="mt-3 text-sm opacity-80 text-center">
+                                {data.titlePageFive}
+                            </p>
+                            <div className="lg:mt-28">
                                 <div className="flex">
                                     <Tik1 className="w-7" />
                                     <p className="mt-2 text-xs opacity-80 mr-3">
@@ -344,109 +365,115 @@ export default function index() {
                                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
                                     </p>
                                 </div>
-                                <div className="mt-28">
+                                <div className="lg:mt-28 mt-10 flex justify-center">
                                     <button className="text-white bg-green-550 rounded-full p-2 w-40">
                                         دانلود شاپیفای
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2">
-                            <div className="flex justify-center">
-                                <div className="rounded-r-3xl w-20 h-40 bg-blue-400 flex items-center justify-center">
-                                    <Cart1 className="w-14" />
-                                </div>
-                                <div className="rounded-l-3xl bg-white w-96 h-40">
-                                    <div className="flex justify-center">
-                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                        <div className="p-5 lg:mt-0 mt-52 h-screen lg:flex justify-center">
+                            <div className="lg:w-1/2 ">
+                                <div className="flex justify-center">
+                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-400 flex items-center justify-center">
+                                        <Cart1 className="w-14" />
                                     </div>
-                                    <div className="p-5">
-                                        <p className=" text-xs text-center opacity-80">
-                                            {data.cartText}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" flex justify-center -mt-5">
-                                <Line1 />
-                            </div>
-                            <div className="flex justify-center -mt-5">
-                                <div className="rounded-r-3xl bg-white w-96 h-40">
-                                    <div className="flex justify-center">
-                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
-                                    </div>
-                                    <div className="p-5">
-                                        <p className=" text-xs text-center opacity-80">
-                                            {data.cartText}
-                                        </p>
+                                    <div className="rounded-l-3xl bg-white w-auto h-auto">
+                                        <div className="flex justify-center">
+                                            <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                        </div>
+                                        <div className="p-5">
+                                            <p className=" text-xs text-center opacity-80">
+                                                {data.cartText}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="rounded-l-3xl w-20 h-40 bg-green-400 flex items-center justify-center">
-                                    <Cart3 className="w-14" />
+                                <div className=" flex justify-center -mt-5">
+                                    <Line1 />
                                 </div>
-                            </div>
-                            <div className=" flex justify-center -mt-5">
-                                <Line2 />
-                            </div>
-                            <div className="flex justify-center">
-                                <div className="rounded-r-3xl w-20 h-40 bg-blue-400 flex items-center justify-center">
-                                    <Cart4 className="w-14" />
-                                </div>
-                                <div className="rounded-l-3xl bg-white w-96 h-40">
-                                    <div className="flex justify-center">
-                                        <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                <div className="flex justify-center -mt-5">
+                                    <div className="rounded-r-3xl bg-white w-auto  h-auto">
+                                        <div className="flex justify-center">
+                                            <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                        </div>
+                                        <div className="p-5">
+                                            <p className=" text-xs text-center opacity-80">
+                                                {data.cartText}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="p-5">
-                                        <p className=" text-xs text-center opacity-80">
-                                            {data.cartText}
-                                        </p>
+                                    <div className="rounded-l-3xl w-20  h-auto bg-green-400 flex items-center justify-center">
+                                        <Cart3 className="w-14" />
+                                    </div>
+                                </div>
+                                <div className=" flex justify-center -mt-5">
+                                    <Line2 />
+                                </div>
+                                <div className="flex justify-center">
+                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-400 flex items-center justify-center">
+                                        <Cart4 className="w-14" />
+                                    </div>
+                                    <div className="rounded-l-3xl bg-white w-au h-auto">
+                                        <div className="flex justify-center">
+                                            <p className="mt-3 text-sm">سادگی و سهولت خرید</p>
+                                        </div>
+                                        <div className="p-5">
+                                            <p className=" text-xs text-center opacity-80">
+                                                {data.cartText}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="mt-36 px-48 ">
-                    <div style={{ backgroundColor: '#20AFFF' }} className=" flex rounded-3xl">
-                        <div className="h-80 w-1/2 blue-500">
-                            <div className="flex absolute">
-                                <Footer_User className="-mt-16" />
+
+                <div className="lg:mt-36 lg:px-48 mt-52 px-5">
+                    <div
+                        style={{ backgroundColor: '#20AFFF' }}
+                        className=" lg:flex rounded-3xl lg:h-0 h-screen"
+                    >
+                        <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10">
+                            <div className="lg:flex absolute">
+                                <Footer_User className="-mt-16 lg:w-80 w-60 items-center" />
                             </div>
                         </div>
-                        <div className="w-1/2  h-80">
-                            <div>
+                        <div className="lg:w-1/2 lg:h-80">
+                            <div className="px-3">
                                 <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
                                 <p className="text-white text-xs mt-3">
                                     !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
                                 </p>
                             </div>
-                            <div className="flex mt-6">
+                            <div className="flex mt-6 px-4">
                                 <div>
                                     <p className="text-white text-xs">نسخه ی اندروید</p>
-                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-36">
                                         <GooglePlay className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-36">
                                         <GooglePlay className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex mt-3 items-center w-48">
+                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-36">
                                         <GooglePlay className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
                                 </div>
-                                <div className="mr-10">
+                                <div className="lg:mr-10 mr-3">
                                     <p className="text-white text-xs">نسخه ی IOS</p>
-                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-36">
                                         <AppleStore className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-36">
                                         <AppleStore className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex items-center mt-3 w-48">
+                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-36">
                                         <AppleStore className="ml-3" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
@@ -455,7 +482,34 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-20 px-48">
+
+                <div className="mt-10 px-10">
+                    <hr className="border-2 border-gray-300" />
+                    <div className="mt-5">
+                        <p className="text-sm">لینک های مهم</p>
+                    </div>
+                    <div className="flex justify-between mt-5">
+                        <p className="text-xs">دانلود شاپیفای</p>
+                        <p className="text-xs">صفحه ی اصلی </p>
+                        <p className="text-xs">قوانین و مقررات</p>
+                    </div>
+                    <div className="flex justify-around text-xs mt-5">
+                        <p>شبکه های اجتماعی</p>
+                        <p>پشتیبانی</p>
+                        <p>لینک های مهم</p>
+                    </div>
+                    <div className="flex justify-between">
+                        <p className="text-xs mt-3">گفتگو با پشتیبانی انلاین</p>
+                        <div>{/* <Youbube /> */}</div>
+                    </div>
+                    <div className="mt-5">
+                        <p className="text-xs">
+                            © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-20 px-48 lg:block md:block hidden">
                     <div className="flex justify-around text-xs">
                         <p>شبکه های اجتماعی</p>
                         <p>پشتیبانی</p>

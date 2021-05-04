@@ -4,7 +4,7 @@ import Logo from '@assets/svg/shopify/logo.svg';
 
 export default function index() {
     return (
-        <div className="relative">
+        <div className="relative lg:block md:block hidden">
             <div className="px-20 p-5 fixed bg-green-50 w-full top-0 z-10">
                 <div className="flex justify-between">
                     <div className="flex">
