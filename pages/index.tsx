@@ -1,4 +1,3 @@
-import { Layout } from '@components/common';
 import { FC } from 'react';
 
 import Home from './home';
