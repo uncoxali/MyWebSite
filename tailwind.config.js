@@ -9,6 +9,18 @@ module.exports = {
     darkMode: 'media', // 'media' or 'class'
     theme: {
         extend: {
+            backgroundColor: (theme) => ({
+                ...theme('colors'),
+                'green-10': '#F2F5F9',
+                'green-20': '#EFF8F7',
+                'blue-20': '##20AFFF',
+            }),
+            textColor: (theme) => theme('colors'),
+            textColor: {
+                'primary': '#3490dc',
+                'secondary': '#ffed4a',
+                'danger': '#e3342f',
+            },
             zIndex: {},
             keyframes: {
                 opacity: {
