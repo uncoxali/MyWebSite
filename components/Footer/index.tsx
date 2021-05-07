@@ -9,21 +9,21 @@ export default function index() {
     return (
         <div>
             <div className="lg:mt-36 lg:px-48 mt-52 px-5">
-                <div className=" lg:flex rounded-3xl lg:h-72 h-screen bg-blue-400">
-                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 flex justify-center">
-                        <div className="lg:flex absolute">
+                <div className=" lg:flex rounded-3xl lg:h-80 h-screen bg-blue-400 lg:px-20 p-5">
+                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 flex justify-center">
+                        <div className="lg:flex justify-start lg:w-full">
                             <Footer_User className="-mt-16 lg:w-80 w-60 items-center" />
                         </div>
                     </div>
-                    <div className="lg:flex-none md:flex flex justify-center">
-                        <div className="lg:w-1/2 lg:h-80">
+                    <div className="lg:flex md:flex flex justify-center lg:mr-32 w-full lg:justify-start">
+                        <div className="lg:w-1/2 lg:h-80 ">
                             <div className="px-3">
                                 <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
                                 <p className="text-white text-xs mt-3">
                                     !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
                                 </p>
                             </div>
-                            <div className="flex mt-6 px-4">
+                            <div className="flex mt-6">
                                 <div>
                                     <p className="text-white text-xs">نسخه ی اندروید</p>
                                     <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-36">

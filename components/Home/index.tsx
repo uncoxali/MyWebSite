@@ -241,7 +241,7 @@ export default function index() {
                     <div className="flex justify-center">
                         <p className="text-xl">سرویس های شاپیفای</p>
                     </div>
-                    <div className="lg:flex md:flex lg:justify-between md:justify-between mt-16 px-12">
+                    <div className="lg:flex lg:px-28 md:flex lg:justify-between md:justify-between mt-16 px-12">
                         <div className="flex justify-center">
                             <div className="bg-white w-72 h-72  rounded-lg mt-5 shadow-2xl md:ml-10">
                                 <div className="flex justify-center">
@@ -305,16 +305,16 @@ export default function index() {
                         </div>
                     </div>
                     <div className="flex justify-center lg:mt-0 -mt-32">
-                        <Service className="mt-3 px-5" />
+                        <Service className="mt-3 px-16" />
                         <div className="flex absolute lg:mt-36 mt-20">
                             <div className="">
                                 <img
-                                    className="w-32 lg:w-72 ml-20 lg:mt-14 md:mt-14 mt-40"
+                                    className="w-32 lg:w-72 ml-20 lg:mt-9 md:mt-14 mt-40"
                                     src="/images/user.png"
                                     alt=""
                                 />
                             </div>
-                            <User1 className="w-32 lg:w-72 lg:mt-8 md:mt-7 mt-2" />
+                            <User1 className="w-32 lg:w-72 lg:mt-3 md:mt-7 mt-2" />
                         </div>
                     </div>
                     <div className=" lg:px-32 lg:mt-16 -mt-48">
@@ -350,7 +350,7 @@ export default function index() {
                 </div>
                 <div className="">
                     <div className="lg:flex  lg:mr-52 mt-28 lg:px-10">
-                        <div className=" h-72 lg:w-1/2 lg:mt-10 px-10 ">
+                        <div className=" h-72 lg:w-1/2 lg:mt-10 px-5 ">
                             <div className="flex justify-center">
                                 <p className="text-lg">سادگی خرید فقط با 3 حرکت</p>
                             </div>
@@ -358,7 +358,7 @@ export default function index() {
                                 {data.titlePageFive}
                             </p>
                             <div className="flex justify-center">
-                                <div className="lg:mt-20 lg:w-72">
+                                <div className="lg:mt-20 lg:w-80 ml-5">
                                     <div className="flex">
                                         <Tik1 className="w-7" />
                                         <p className="mt-2 text-xs opacity-80 mr-3">
@@ -408,7 +408,7 @@ export default function index() {
                         <div className="p-5 lg:mt-0 mt-52 h-screen lg:flex justify-center">
                             <div className="lg:w-1/2 ">
                                 <div className="flex justify-center">
-                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-400 flex items-center justify-center">
+                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-20 flex items-center justify-center p-2">
                                         <Cart1 className="w-14" />
                                     </div>
                                     <div className="rounded-l-3xl bg-white w-auto h-auto">
@@ -436,7 +436,7 @@ export default function index() {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="rounded-l-3xl w-20  h-auto bg-green-400 flex items-center justify-center">
+                                    <div className="rounded-l-3xl w-20  h-auto bg-blue-10 flex items-center justify-center p-2">
                                         <Cart3 className="w-14" />
                                     </div>
                                 </div>
@@ -444,7 +444,7 @@ export default function index() {
                                     <Line2 />
                                 </div>
                                 <div className="flex justify-center">
-                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-400 flex items-center justify-center">
+                                    <div className="rounded-r-3xl w-20 h-auto bg-blue-30 flex items-center justify-center p-2">
                                         <Cart4 className="w-14" />
                                     </div>
                                     <div className="rounded-l-3xl bg-white w-au h-auto">

@@ -13,7 +13,9 @@ module.exports = {
                 ...theme('colors'),
                 'green-10': '#F2F5F9',
                 'green-20': '#EFF8F7',
-                'blue-20': '##20AFFF',
+                'blue-20': '#32ADFF',
+                'blue-10': '#3ACFB3',
+                'blue-30': '#32ADFF',
             }),
             textColor: (theme) => theme('colors'),
             textColor: {
