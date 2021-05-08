@@ -3,7 +3,11 @@ import React from 'react';
 import Footer_User from '@assets/svg/shopify/footer-user.svg';
 import GooglePlay from '@assets/svg/shopify/googleplay.svg';
 import AppleStore from '@assets/svg/shopify/applestore.svg';
-import Youbube from '@assets/svg/icons/youtube.svg';
+import Instagram from '@assets/svg/icons/instagram.svg';
+import Youtube from '@assets/svg/icons/youtube.svg';
+import Twitter from '@assets/svg/icons/twitter.svg';
+import WhatsApp from '@assets/svg/icons/whatsapp.svg';
+import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
     return (
@@ -75,9 +79,27 @@ export default function index() {
                     <p>پشتیبانی</p>
                     <p>لینک های مهم</p>
                 </div>
-                <div className="flex justify-between">
-                    <p className="text-xs mt-3">گفتگو با پشتیبانی انلاین</p>
-                    <div>{/* <Youbube /> */}</div>
+                <div className="mt-5">
+                    <div className="flex justify-center">
+                        <p className="text-xs mt-3">گفتگو با پشتیبانی انلاین</p>
+                    </div>
+                    <div className="flex mt-3 justify-center">
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Youtube />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Instagram />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3 flex justify-center items-center">
+                            <WhatsApp />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Linkedin />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Twitter />
+                        </div>
+                    </div>
                 </div>
                 <div className="mt-5 flex justify-center">
                     <p className="text-xs">
@@ -93,7 +115,23 @@ export default function index() {
                     <p>لینک های مهم</p>
                 </div>
                 <div className="flex justify-around mt-10 text-xs">
-                    <div>icons</div>
+                    <div className="flex">
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Youtube />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Instagram />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3 flex justify-center items-center">
+                            <WhatsApp />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Linkedin />
+                        </div>
+                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                            <Twitter />
+                        </div>
+                    </div>
                     <p>گفتگو با پشتیبانی انلاین</p>
                     <div className="flex justify-around text-xs">
                         <p className="mr-5">دانلود شاپیفای</p>

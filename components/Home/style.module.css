@@ -1,0 +1,6 @@
+.border {
+    border-radius: 70% 30% 30% 70% / 50% 48% 52% 50%;
+    width: 80px;
+    height: 75px;
+    border: 1px solid gray;
+}

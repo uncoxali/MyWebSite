@@ -7,6 +7,11 @@ import Logo from '@assets/svg/shopify/logo.svg';
 import LogoShop from '@assets/svg/shopify/logoshop.svg';
 import Menu from '@assets/svg/shopify/menu.svg';
 import Close from '@assets/svg/shopify/close-btn.svg';
+import Instagram from '@assets/svg/icons/instagram.svg';
+import Youtube from '@assets/svg/icons/youtube.svg';
+import Twitter from '@assets/svg/icons/twitter.svg';
+import WhatsApp from '@assets/svg/icons/whatsapp.svg';
+import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
     const [screen, setScreen] = useState<number>(0);
@@ -17,7 +22,7 @@ export default function index() {
             const scrolled = window.scrollY;
             setScreen(scrolled);
         });
-    });
+    }, []);
 
     return (
         <div className="relative w-full max-w-8xl mx-auto  flex flex-col">
@@ -146,46 +151,27 @@ export default function index() {
                                     دانلود شاپیفای
                                 </button>
                             </div>
+                            <div className="flex mt-10 justify-center">
+                                <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                                    <Youtube />
+                                </div>
+                                <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                                    <Instagram />
+                                </div>
+                                <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3 flex justify-center items-center">
+                                    <WhatsApp />
+                                </div>
+                                <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                                    <Linkedin />
+                                </div>
+                                <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
+                                    <Twitter />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             )}
-            {/* 
-<div className="p-7">
-                            <ul>
-                                <li className="mt-5">
-                                    <ActiveLink href="/">
-                                        <a>خانه</a>
-                                    </ActiveLink>
-                                </li>
-                                <li className="mt-5">
-                                    <ActiveLink href="/question">
-                                        <a>سوالات متداول</a>
-                                    </ActiveLink>
-                                    <Link href="/question"></Link>
-                                </li>
-                                <li className="mt-5">
-                                    <ActiveLink href="/tariffs">
-                                        <a> تعرفه ها</a>
-                                    </ActiveLink>
-                                </li>
-                                <li className="mt-5">
-                                    <ActiveLink href="/contact">
-                                        <a> تماس با ما</a>
-                                    </ActiveLink>
-                                </li>
-                                <li className="mt-5">
-                                    <ActiveLink href="/about">
-                                        <a> درباره ما</a>
-                                    </ActiveLink>
-                                </li>
-                            </ul>
-                            <div>
-                                <button className="text-white bg-green-550 p-2 w-full mt-5 ">
-                                    دانلود شاپیفای
-                                </button>
-                            </div>
-                        </div> */}
         </div>
     );
 }

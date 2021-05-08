@@ -74,7 +74,9 @@ module.exports = {
             maxWidth: {
                 '8xl': '1920px',
             },
-            spacing: {},
+            spacing: {
+                '100': '35rem',
+            },
             colors: {
                 gray: {
                     ...colors.gray,
