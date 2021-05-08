@@ -305,16 +305,16 @@ export default function index() {
                         </div>
                     </div>
                     <div className="flex justify-center lg:mt-0 -mt-32">
-                        <Service className="mt-3 px-16" />
+                        <Service className="mt-3 lg:px-16 md:px-16 px-5" />
                         <div className="flex absolute lg:mt-36 mt-20">
                             <div className="">
                                 <img
-                                    className="w-32 lg:w-72 ml-20 lg:mt-9 md:mt-14 mt-40"
+                                    className="w-24 lg:w-72 ml-20 lg:mt-9 md:mt-14 mt-48 lg:mr-0 md:mr-0 mr-10"
                                     src="/images/user.png"
                                     alt=""
                                 />
                             </div>
-                            <User1 className="w-32 lg:w-72 lg:mt-3 md:mt-7 mt-2" />
+                            <User1 className="w-24 lg:w-72 lg:mt-3 md:mt-7 mt-5 ml-10" />
                         </div>
                     </div>
                     <div className=" lg:px-32 lg:mt-16 -mt-48">
@@ -462,7 +462,9 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <div className="">
+                    <Footer />
+                </div>
             </div>
         </div>
     );

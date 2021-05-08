@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
+import ActiveLink from './activLink';
+
 import Logo from '@assets/svg/shopify/logo.svg';
 import LogoShop from '@assets/svg/shopify/logoshop.svg';
 import Menu from '@assets/svg/shopify/menu.svg';
 import Close from '@assets/svg/shopify/close-btn.svg';
-import Style from './style.module.css';
 
 export default function index() {
     const [screen, setScreen] = useState<number>(0);
@@ -18,63 +19,63 @@ export default function index() {
         });
     });
 
-    // var header = document.getElementById("myDIV");
-    // var btns = header.getElementsByClassName("btn");
-    // for (var i = 0; i < btns.length; i++) {
-    //   btns[i].addEventListener("click", function() {
-    //   var current = document.getElementsByClassName("active");
-    //   current[0].className = current[0].className.replace(" active", "");
-    //   this.className += " active";
-    //   });
-    // }
-
-    useEffect(() => {
-        let list = document.querySelector('.list');
-        let active = list?.querySelector('.active');
-        console.log(active);
-    });
     return (
         <div className="relative w-full max-w-8xl mx-auto  flex flex-col">
             <div className={` relative lg:block md:block hidden`}>
                 <div
-                    className={` lg:px-20 p-5 fixed w-full top-0 z-10 ${
+                    className={` lg:px-20 p-5 fixed w-full top-0 z-10  ${
                         screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
-                    } `}
+                    }`}
                 >
                     <div className="flex justify-between">
                         <div className="flex">
                             <div className="flex cursor-pointer">
                                 <Logo />
                                 <p className="font-bold text-green-550 mr-3 mt-3">
-                                    <Link href="/">
+                                    <ActiveLink href="/">
+                                        <p>شاپیفای</p>
+                                    </ActiveLink>
+                                    {/* <Link href="/">
                                         <a>شاپیفای</a>
-                                    </Link>
+                                    </Link> */}
                                 </p>
                             </div>
-                            <ul className="flex mt-4 text-sm list">
-                                <li className={`  mr-12 cursor-pointer active`}>
-                                    <Link href="/question">
+                            <div className="flex mt-4 text-sm list">
+                                <div className={`  mr-12 cursor-pointer active`}>
+                                    <ActiveLink href="/question">
+                                        <p>سوالات متداول</p>
+                                    </ActiveLink>
+                                    {/* <Link href="/question">
                                         <a>سوالات متداول</a>
-                                    </Link>
-                                </li>
+                                    </Link> */}
+                                </div>
 
-                                <li className={`  mr-12 cursor-pointer active`}>
-                                    <Link href="/tariffs">
+                                <div className={`  mr-12 cursor-pointer active`}>
+                                    <ActiveLink href="/tariffs">
+                                        <p> تعرفه ها</p>
+                                    </ActiveLink>
+                                    {/* <Link href="/tariffs">
                                         <a> تعرفه ها</a>
-                                    </Link>
-                                </li>
+                                    </Link> */}
+                                </div>
 
-                                <li className={`  mr-12 cursor-pointer active`}>
-                                    <Link href="/contact">
+                                <div className={`  mr-12 cursor-pointer active`}>
+                                    <ActiveLink href="/contact">
+                                        <p> تماس با ما</p>
+                                    </ActiveLink>
+                                    {/* <Link href="/contact">
                                         <a> تماس با ما</a>
-                                    </Link>
-                                </li>
-                                <li className={`   mr-12 cursor-pointer active`}>
-                                    <Link href="/about">
+                                    </Link> */}
+                                </div>
+                                <div className={`   mr-12 cursor-pointer active`}>
+                                    <ActiveLink href="/about">
+                                        <p> درباره ما</p>
+                                    </ActiveLink>
+                                    {/* <Link href="/about">
                                         <a> درباره ما</a>
-                                    </Link>
-                                </li>
-                            </ul>
+                                    </Link> */}
+                                </div>
+                            </div>
                         </div>
                         <div className="flex mt-3 left-5">
                             <div>
@@ -90,7 +91,11 @@ export default function index() {
                 </div>
             </div>
             <div className="lg:hidden md:hidden block">
-                <div className="w-full h-20 bg-green-20 top-0 fixed z-10">
+                <div
+                    className={` ${
+                        screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
+                    } w-full h-20 top-0 fixed z-10`}
+                >
                     <div className="flex justify-center">
                         <LogoShop className="mt-3" />
                         <p className="font-bold text-green-550 mr-3 mt-5 text-lg">شاپیفای</p>
@@ -145,6 +150,42 @@ export default function index() {
                     </div>
                 </div>
             )}
+            {/* 
+<div className="p-7">
+                            <ul>
+                                <li className="mt-5">
+                                    <ActiveLink href="/">
+                                        <a>خانه</a>
+                                    </ActiveLink>
+                                </li>
+                                <li className="mt-5">
+                                    <ActiveLink href="/question">
+                                        <a>سوالات متداول</a>
+                                    </ActiveLink>
+                                    <Link href="/question"></Link>
+                                </li>
+                                <li className="mt-5">
+                                    <ActiveLink href="/tariffs">
+                                        <a> تعرفه ها</a>
+                                    </ActiveLink>
+                                </li>
+                                <li className="mt-5">
+                                    <ActiveLink href="/contact">
+                                        <a> تماس با ما</a>
+                                    </ActiveLink>
+                                </li>
+                                <li className="mt-5">
+                                    <ActiveLink href="/about">
+                                        <a> درباره ما</a>
+                                    </ActiveLink>
+                                </li>
+                            </ul>
+                            <div>
+                                <button className="text-white bg-green-550 p-2 w-full mt-5 ">
+                                    دانلود شاپیفای
+                                </button>
+                            </div>
+                        </div> */}
         </div>
     );
 }

@@ -8,7 +8,7 @@ import Youbube from '@assets/svg/icons/youtube.svg';
 export default function index() {
     return (
         <div>
-            <div className="lg:mt-36 lg:px-48 mt-52 px-5">
+            <div className="lg:mt-36 lg:px-48 mt-60 px-5">
                 <div className=" lg:flex rounded-3xl lg:h-80 h-screen bg-blue-400 lg:px-20 p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 flex justify-center">
                         <div className="lg:flex justify-start lg:w-full">
