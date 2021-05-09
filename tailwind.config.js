@@ -9,6 +9,10 @@ module.exports = {
     darkMode: 'media', // 'media' or 'class'
     theme: {
         extend: {
+            textColor: {
+                'purple-10': '#43457C',
+            },
+            textColor: ['active'],
             backgroundColor: (theme) => ({
                 ...theme('colors'),
                 'green-10': '#F2F5F9',
@@ -71,6 +75,7 @@ module.exports = {
             },
             width: {
                 'max-content': 'max-content',
+                '100': '45rem',
             },
             maxWidth: {
                 '8xl': '1920px',

@@ -2,5 +2,12 @@
     border-radius: 70% 30% 30% 70% / 50% 48% 52% 50%;
     width: 80px;
     height: 75px;
-    border: 1px solid gray;
+    border: 1px solid #8a95ad;
+}
+
+.text {
+    color: #4c5364;
+}
+.alltext {
+    color: #43457c;
 }

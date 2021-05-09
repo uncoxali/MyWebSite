@@ -25,6 +25,7 @@ import Cart4 from '@assets/svg/shopify/cart4.svg';
 import Tik1 from '@assets/svg/shopify/tik1.svg';
 import Line1 from '@assets/svg/shopify/line1.svg';
 import Line2 from '@assets/svg/shopify/line2.svg';
+import Chart from '@assets/svg/shopify/chart.svg';
 import UserSvg from '@assets/svg/icons/usersvg.svg';
 
 import Style from './style.module.css';
@@ -59,8 +60,11 @@ export default function index() {
                             <p className="text-indigo-400 lg:text-4xl text-2xl mt-20 font-bold">
                                 تغییر کن تا آیندرو حس کنی{' '}
                             </p>
-                            <p className="mt-5 lg:text-sm text-sm flex justify-center opacity-70">
-                                {data.titlePageOne}
+                            <p className="mt-5 lg:text-base leading-9 text-sm flex justify-center">
+                                <p className={cn(Style.alltext, 'leading-8')}>
+                                    {' '}
+                                    {data.titlePageOne}
+                                </p>
                             </p>
                         </div>
                         <div className="mt-10 flex justify-between">
@@ -109,7 +113,9 @@ export default function index() {
                             <p className="text-indigo-400 lg:text-4xl text-2xl font-bold">
                                 تغییر کن تا آیندرو حس کنی{' '}
                             </p>
-                            <p className="mt-5 opacity-70 text-sm">{data.titlePageTwo}</p>
+                            <p className={cn(Style.alltext, 'mt-5 text-base leading-9')}>
+                                {data.titlePageTwo}
+                            </p>
                         </div>
                         <div className="mt-10 flex justify-between">
                             <div>
@@ -120,7 +126,7 @@ export default function index() {
                                     دانلود شاپیفای
                                 </button>
                             </div>
-                            <div className="flex">
+                            <div className="flex ml-10">
                                 <div
                                     onClick={handleClick}
                                     className={cn(
@@ -167,15 +173,13 @@ export default function index() {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <div>
-                            <p className="text-lg font-bold text-gray-600 mt-2">
-                                سرویس های شاپیفای
-                            </p>
+                        <div className={Style.text}>
+                            <p className="text-lg font-bold mt-2">سرویس های شاپیفای</p>
                         </div>
                     </div>
 
-                    <div className="overflow-x-auto px-5 lg:hidden md:hidden block mt-5 p-5">
-                        <div className="flex justify-between w-100 ml-10">
+                    <div className="lg:overflow-hidden md:overflow-hidden lg:flex justify-center overflow-x-auto px-5 mt-5 p-5">
+                        <div className="flex justify-between lg:w-full lg:px-52 md:px-44 md:w-full w-100 ml-10">
                             <div className="">
                                 <div
                                     className={cn(Style.border, 'flex justify-center items-center')}
@@ -258,83 +262,18 @@ export default function index() {
                             </div>
                         </div>
                     </div>
-
-                    <div className="lg:block md:block hidden">
-                        <div className="flex justify-around px-60">
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28 transform rotate-180" />
-                                    <Time className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p className="">فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28" />
-                                    <Time className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p>فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28 transform rotate-180" />
-                                    <Cart className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p>فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28" />
-                                    <Location className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p>فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28 transform rotate-180" />
-                                    <Heart className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p>فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                            <div className="">
-                                <div className="flex items-center justify-center">
-                                    <Border className="w-28" />
-                                    <Alarm className="absolute w-8" />
-                                </div>
-                                <div className="-mt-14 mr-3">
-                                    <p>فروشگاه آنلاین</p>
-                                    <p className="mr-2 opacity-60">online shop</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="lg:mt-28 lg:p-10 p-5">
                     <div className="lg:flex lg:px-16 p-5 lg:justify-around">
                         <div className="lg:w-1/2 mt-24">
-                            <p className="text-xl font-bold text-gray-600">
+                            <p className={cn(Style.text, 'text-xl font-bold ')}>
                                 سادگی خرید فقط با 3 حرکت
                             </p>
-                            <p className="mt-7 lg:text-base text-sm opacity-70">
-                                {data.titlePageThree}
+                            <p className={cn(Style.alltext, 'mt-7 lg:text-base text-sm ')}>
+                                <p className="leading-8">{data.titlePageThree}</p>
                             </p>
-                            <p className="opacity-70 mt-10 text-xs">اطلاعات بیشتر</p>
+                            <p className="opacity-60 mt-10 text-xs">اطلاعات بیشتر</p>
                         </div>
                         <div className="-mt-14 flex justify-center">
                             <PageCard className="w-72" />
@@ -347,7 +286,9 @@ export default function index() {
                         <p className="text-sm opacity-70">مهمترین مزایا</p>
                     </div>
                     <div className="flex justify-center">
-                        <p className="text-xl mt-2 font-bold text-gray-600">سرویس های شاپیفای</p>
+                        <p className={cn(Style.text, 'text-xl mt-2 font-bold ')}>
+                            سرویس های شاپیفای
+                        </p>
                     </div>
                     <div className="lg:flex lg:px-28 lg:justify-between md:justify-between mt-16 px-12">
                         <div className="flex justify-center">
@@ -362,8 +303,11 @@ export default function index() {
                                                 {items[0].title}
                                             </p>
                                         </div>
-                                        <p className="text-xs mt-5 opacity-60">
-                                            {items[0].decription}
+                                        <p className="text-xs mt-5  text-center">
+                                            <p className={cn(Style.alltext, 'leading-5')}>
+                                                {' '}
+                                                {items[0].decription}
+                                            </p>
                                         </p>
                                     </div>
                                 </div>
@@ -381,8 +325,10 @@ export default function index() {
                                                 {items[1].title}
                                             </p>
                                         </div>
-                                        <p className="text-xs mt-5 opacity-60">
-                                            {items[1].decription}
+                                        <p className="text-xs mt-5  text-center">
+                                            <p className={cn(Style.alltext, 'leading-5')}>
+                                                {items[1].decription}
+                                            </p>
                                         </p>
                                     </div>
                                 </div>
@@ -400,8 +346,10 @@ export default function index() {
                                                 {items[2].title}
                                             </p>
                                         </div>
-                                        <p className="text-xs mt-5 opacity-60">
-                                            {items[2].decription}
+                                        <p className="text-xs mt-5 text-center">
+                                            <p className={cn(Style.alltext, 'leading-5')}>
+                                                {items[2].decription}
+                                            </p>
                                         </p>
                                     </div>
                                 </div>
@@ -412,27 +360,17 @@ export default function index() {
                 <div className="lg:mt-32 mt-20 ">
                     <div className="">
                         <div className="flex justify-center">
-                            <p className="text-sm opacity-70">چرا بی استفاده</p>
+                            <p className="text-sm opacity-70 ">چرا بی استفاده</p>
                         </div>
                         <div className="flex justify-center">
-                            <p className="font-bold text-gray-600 mt-2">سرویس هاس شاپیفای</p>
+                            <p className={cn(Style.text, 'font-bold mt-2')}>سرویس هاس شاپیفای</p>
                         </div>
                     </div>
-                    <div className="flex justify-center lg:mt-0 -mt-32">
-                        <Service className="mt-3 lg:px-16 md:px-16 px-5" />
 
-                        <div className="flex absolute lg:mt-36 mt-20">
-                            <div className="">
-                                <img
-                                    className="w-24 lg:w-72 md:w-36 ml-20 lg:mt-9 md:mt-52 mt-48 lg:mr-0 md:mr-0 mr-10"
-                                    src="/images/user.png"
-                                    alt=""
-                                />
-                            </div>
-                            <User1 className="w-24 lg:w-72 md:w-36 md:mt-20 lg:mt-3 mt-5 ml-10" />
-                        </div>
+                    <div className="flex justify-center lg:px-10 mr-5">
+                        <Chart className="lg:w-5/6" />
                     </div>
-                    <div className=" lg:px-32 lg:mt-16 md:mt-5 -mt-48">
+                    <div className=" lg:px-28 lg:mt-5 md:mt-5 -mt-48">
                         <div className="flex justify-between">
                             <div className="w-1/2 lg:px-20 p-3">
                                 <div className="flex justify-center">
@@ -466,19 +404,19 @@ export default function index() {
                 <div className="">
                     <div className="lg:flex  lg:mr-52 mt-28 lg:px-10">
                         <div className=" h-72 lg:w-1/2 lg:mt-10 px-5 ">
-                            <div className="flex justify-center">
-                                <p className="text-lg font-bold text-gray-600">
+                            <div className="flex justify-start">
+                                <p className={cn(Style.text, 'text-lg font-bold text-left')}>
                                     سادگی خرید فقط با 3 حرکت
                                 </p>
                             </div>
-                            <p className="mt-3 text-xs opacity-70 text-right">
+                            <p className={cn(Style.alltext, 'mt-3 text-sm text-right leading-7')}>
                                 {data.titlePageFive}
                             </p>
                             <div className="flex justify-center">
-                                <div className="lg:mt-20 lg:w-80 ml-5 mt-10">
+                                <div className={cn(Style.alltext, 'lg:mt-20 lg:w-80 ml-5 mt-10')}>
                                     <div className="flex">
                                         <Tik1 className="w-7" />
-                                        <p className="mt-2 text-xs opacity-80 mr-3">
+                                        <p className="mt-2 text-xs mr-3">
                                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                             چاپ
                                         </p>
@@ -486,7 +424,7 @@ export default function index() {
                                     <div className="flex mt-3">
                                         <Tik1 className="w-7" />
 
-                                        <p className="mt-2 text-xs opacity-80 mr-3">
+                                        <p className="mt-2 text-xs mr-3">
                                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                             چاپ
                                         </p>
@@ -494,7 +432,7 @@ export default function index() {
                                     <div className="flex mt-3">
                                         <Tik1 className="w-7" />
 
-                                        <p className="mt-2 text-xs opacity-80 mr-3">
+                                        <p className="mt-2 text-xs mr-3">
                                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                             چاپ
                                         </p>
@@ -502,14 +440,14 @@ export default function index() {
                                     <div className="flex mt-3">
                                         <Tik1 className="w-7" />
 
-                                        <p className="mt-2 text-xs opacity-80 mr-3">
+                                        <p className="mt-2 text-xs mr-3">
                                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                             چاپ
                                         </p>
                                     </div>
                                     <div className="flex mt-3">
                                         <Tik1 className="w-7" />
-                                        <p className="mt-2 text-xs opacity-80 mr-3">
+                                        <p className="mt-2 text-xs mr-3">
                                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                                             چاپ
                                         </p>
@@ -522,7 +460,7 @@ export default function index() {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-5 lg:mt-0 mt-52 h-screen lg:flex justify-center">
+                        <div className="p-5 lg:mt-0 mt-64 lg:h-screen lg:flex justify-center">
                             <div className="lg:w-1/2 ">
                                 <div className="flex justify-center">
                                     <div className="rounded-r-3xl w-20 h-auto bg-blue-20 flex items-center justify-center p-2">

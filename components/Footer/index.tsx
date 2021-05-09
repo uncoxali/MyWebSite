@@ -12,20 +12,22 @@ import Linkedin from '@assets/svg/icons/linkedin.svg';
 export default function index() {
     return (
         <div>
-            <div className="lg:mt-36 md:mt-72 lg:px-64 mt-60 p-2">
+            <div className="lg:mt-36 md:mt-72 lg:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5 ">
-                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 flex justify-center">
-                        <div className="lg:flex justify-start lg:w-full">
-                            <Footer_User className="-mt-16 lg:w-80 w-60 items-center" />
+                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 lg:-mr-24">
+                        <div className=" lg:w-full absolute">
+                            <Footer_User className="-mt-16 lg:w-80 w-60 " />
                         </div>
                     </div>
-                    <div className="lg:flex md:flex flex justify-center lg:mr-32 w-full lg:justify-start px-10">
+                    <div className="lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-10">
                         <div className="lg:w-1/2 lg:h-80 ">
                             <div className="px-3">
                                 <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
-                                <p className="text-white text-xs mt-3">
-                                    !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
-                                </p>
+                                <div className="lg:w-80">
+                                    <p className="text-white text-xs mt-3">
+                                        !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
+                                    </p>
+                                </div>
                             </div>
                             <div className="flex mt-6">
                                 <div>
