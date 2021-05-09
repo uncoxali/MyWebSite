@@ -16,6 +16,7 @@ module.exports = {
                 'blue-20': '#32ADFF',
                 'blue-10': '#3ACFB3',
                 'blue-30': '#32ADFF',
+                'blue-40': '#20AFFF',
             }),
             textColor: (theme) => theme('colors'),
             textColor: {
@@ -75,7 +76,7 @@ module.exports = {
                 '8xl': '1920px',
             },
             spacing: {
-                '100': '35rem',
+                '100': '45rem',
             },
             colors: {
                 gray: {
