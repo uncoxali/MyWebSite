@@ -15,7 +15,7 @@ export default function index() {
             <div className="lg:mt-36 md:mt-72 lg:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5 ">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 lg:-mr-24">
-                        <div className=" lg:w-full absolute">
+                        <div className=" lg:w-full ">
                             <Footer_User className="-mt-16 lg:w-80 w-60 " />
                         </div>
                     </div>

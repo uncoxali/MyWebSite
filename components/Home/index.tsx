@@ -563,9 +563,7 @@ export default function index() {
                     </div>
                 </div>
                 <div ref={div} className="">
-                    <Fade>
-                        <Footer />
-                    </Fade>
+                    <Footer />
                 </div>
             </div>
         </div>
