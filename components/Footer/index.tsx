@@ -12,11 +12,11 @@ import Linkedin from '@assets/svg/icons/linkedin.svg';
 export default function index() {
     return (
         <div>
-            <div className="lg:mt-36 md:mt-72 lg:px-64 mt-16 p-2">
+            <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5 ">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 lg:-mr-24">
                         <div className=" lg:w-full ">
-                            <Footer_User className="-mt-16 lg:w-80 w-60 " />
+                            <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
                     </div>
                     <div className="lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-10">
@@ -72,19 +72,20 @@ export default function index() {
                 <div className="mt-5">
                     <p className="text-sm">لینک های مهم</p>
                 </div>
-                <div className="flex justify-between mt-5">
+                <div className="flex justify-between mt-5" style={{ color: '#707A90' }}>
                     <p className="text-xs">دانلود شاپیفای</p>
                     <p className="text-xs">صفحه ی اصلی </p>
                     <p className="text-xs">قوانین و مقررات</p>
                 </div>
                 <div className="flex justify-around text-xs mt-5">
-                    <p>شبکه های اجتماعی</p>
                     <p>پشتیبانی</p>
-                    <p>لینک های مهم</p>
+                    <p>شبکه های اجتماعی</p>
                 </div>
-                <div className="mt-5">
+                <div className="mt-5 flex justify-between">
                     <div className="flex justify-center">
-                        <p className="text-xs mt-3">گفتگو با پشتیبانی انلاین</p>
+                        <p className="text-xs mt-7" style={{ color: '#707A90' }}>
+                            گفتگو با پشتیبانی انلاین
+                        </p>
                     </div>
                     <div className="flex mt-3 justify-center">
                         <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
@@ -93,9 +94,7 @@ export default function index() {
                         <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
                             <Instagram />
                         </div>
-                        <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3 flex justify-center items-center">
-                            <WhatsApp />
-                        </div>
+
                         <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
                             <Linkedin />
                         </div>
@@ -113,8 +112,8 @@ export default function index() {
 
             <div className="mt-20 px-48 lg:block md:block hidden">
                 <div className="flex justify-around text-xs">
-                    <p>شبکه های اجتماعی</p>
                     <p>پشتیبانی</p>
+                    <p>شبکه های اجتماعی</p>
                     <p>لینک های مهم</p>
                 </div>
                 <div className="flex justify-around mt-10 text-xs">
@@ -135,8 +134,8 @@ export default function index() {
                             <Twitter />
                         </div>
                     </div>
-                    <p>گفتگو با پشتیبانی انلاین</p>
-                    <div className="flex justify-around text-xs">
+                    <p style={{ color: '#707A90' }}>گفتگو با پشتیبانی انلاین</p>
+                    <div className="flex justify-around text-xs" style={{ color: '#707A90' }}>
                         <p className="mr-5">دانلود شاپیفای</p>
                         <p className="mr-5">صفحه ی اصلی </p>
                         <p className="mr-5">قوانین و مقررات</p>

@@ -46,13 +46,18 @@ export default function index() {
     const items = data.service;
 
     return (
-        <div className="">
+        <div className="relative w-full max-w-8xl mx-auto  flex flex-col min-h-screen">
             <div className="bg-green-20 lg:p-32 md:p-20 lg:flex lg:justify-center w-full">
                 <div className="lg:flex">
                     <div className={`lg:h-96 lg:w-1/2  p-5 ${page == 'p' ? 'block' : 'hidden'} `}>
                         <Fade direction="right" delay={500}>
                             <div className="px-5">
-                                <p className="text-indigo-400 lg:text-4xl text-2xl mt-20 font-bold">
+                                <p
+                                    className={cn(
+                                        Style.title,
+                                        ' lg:text-4xl text-2xl mt-20 font-bold',
+                                    )}
+                                >
                                     تغییر کن تا آیندرو حس کنی{' '}
                                 </p>
                                 <p className="mt-5 lg:text-base leading-9 text-sm flex justify-center">
@@ -109,7 +114,7 @@ export default function index() {
                     >
                         <Fade direction="right" delay={500}>
                             <div className="px-7 mt-20">
-                                <p className="text-indigo-400 lg:text-4xl text-2xl font-bold">
+                                <p className={cn(Style.title, ' lg:text-4xl text-2xl font-bold')}>
                                     تغییر کن تا آیندرو حس کنی{' '}
                                 </p>
                                 <p className={cn(Style.alltext, 'mt-5 text-base leading-9')}>
@@ -395,36 +400,34 @@ export default function index() {
                         </div>
                     </Fade>
                     <div className=" lg:px-28 lg:mt-5 md:mt-5 -mt-48">
-                        <Fade direction="down" delay={500}>
-                            <div className="flex justify-between">
-                                <div className="w-1/2 lg:px-20 p-3">
-                                    <div className="flex justify-center">
-                                        <p className="lg:text-lg text-sm font-bold text-green-550">
-                                            فروش با استفاده از لینستو
-                                        </p>
-                                    </div>
-                                    <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
-                                        {data.titlePageFour}
+                        <div className="flex justify-between">
+                            <div className="w-1/2 lg:px-20 p-3">
+                                <div className="flex justify-center">
+                                    <p className="lg:text-lg text-sm font-bold text-green-550">
+                                        فروش با استفاده از لینستو
                                     </p>
-                                    <div className="mt-16 flex justify-center">
-                                        <Tik />
-                                    </div>
                                 </div>
-                                <div className="w-1/2 lg:px-20 p-3">
-                                    <div className="flex justify-center">
-                                        <p className="lg:text-lg text-sm font-bold text-indigo-400">
-                                            فروش از راه قدیمی{' '}
-                                        </p>
-                                    </div>
-                                    <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
-                                        {data.titlePageFour}
-                                    </p>
-                                    <div className="mt-16 flex justify-center">
-                                        <Close />
-                                    </div>
+                                <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
+                                    {data.titlePageFour}
+                                </p>
+                                <div className="mt-16 flex justify-center">
+                                    <Tik />
                                 </div>
                             </div>
-                        </Fade>
+                            <div className="w-1/2 lg:px-20 p-3">
+                                <div className="flex justify-center">
+                                    <p className="lg:text-lg text-sm font-bold text-indigo-400">
+                                        فروش از راه قدیمی{' '}
+                                    </p>
+                                </div>
+                                <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
+                                    {data.titlePageFour}
+                                </p>
+                                <div className="mt-16 flex justify-center">
+                                    <Close />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="">
