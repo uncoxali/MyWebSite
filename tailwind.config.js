@@ -21,10 +21,19 @@ module.exports = {
                 'blue-10': '#3ACFB3',
                 'blue-30': '#32ADFF',
                 'blue-40': '#20AFFF',
+                'blue-40': '#20AFFF',
+                'primary': '#3ACFB3',
             }),
-            textColor: (theme) => theme('colors'),
+            borderColor: (theme) => ({
+                ...theme('colors'),
+                DEFAULT: theme('colors.gray.300', 'currentColor'),
+                'primary': '#3ACFB3',
+                'red-10': '#F6A27E',
+                'gray-10': '#8A8E96',
+                'yellow-10': '#F3C56D',
+            }),
             textColor: {
-                'primary': '#3490dc',
+                'primary': '#3ACFB3',
                 'secondary': '#ffed4a',
                 'danger': '#e3342f',
             },
@@ -82,6 +91,8 @@ module.exports = {
             },
             spacing: {
                 '100': '45rem',
+                '90': '35rem',
+                '75': '18.2rem',
             },
             colors: {
                 gray: {

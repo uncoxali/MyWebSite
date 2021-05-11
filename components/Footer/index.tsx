@@ -11,7 +11,7 @@ import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
     return (
-        <div>
+        <div className="container mx-auto px-4">
             <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5 ">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 lg:-mr-24">
