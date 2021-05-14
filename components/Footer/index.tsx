@@ -11,16 +11,16 @@ import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
     return (
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
             <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
-                <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5 ">
-                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-16 lg:-mr-24">
+                <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
+                    <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
                         <div className=" lg:w-full ">
                             <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
                     </div>
-                    <div className="lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-10">
-                        <div className="lg:w-1/2 lg:h-80 ">
+                    <div className="lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-5">
+                        <div className="lg:w-1/2 lg:h-80">
                             <div className="px-3">
                                 <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
                                 <div className="lg:w-80">
@@ -29,34 +29,34 @@ export default function index() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex mt-6">
-                                <div>
+                            <div className="flex mt-8 ">
+                                <div className="">
                                     <p className="text-white text-xs">نسخه ی اندروید</p>
-                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-44">
-                                        <GooglePlay className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <GooglePlay className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-44">
-                                        <GooglePlay className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <GooglePlay className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex mt-3 items-center lg:w-48 w-44">
-                                        <GooglePlay className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <GooglePlay className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
                                 </div>
-                                <div className="lg:mr-10 mr-3">
+                                <div className="lg:mr-10 mr-2">
                                     <p className="text-white text-xs">نسخه ی IOS</p>
-                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-44">
-                                        <AppleStore className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <AppleStore className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-44">
-                                        <AppleStore className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <AppleStore className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
-                                    <div className="border border-white p-2 flex items-center mt-3 lg:w-48 w-44">
-                                        <AppleStore className="ml-3" />
+                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <AppleStore className="ml-2" />
                                         <p className="text-xs text-white ">دریافت از google play</p>
                                     </div>
                                 </div>
@@ -77,9 +77,11 @@ export default function index() {
                     <p className="text-xs">صفحه ی اصلی </p>
                     <p className="text-xs">قوانین و مقررات</p>
                 </div>
-                <div className="flex justify-around text-xs mt-5">
-                    <p>پشتیبانی</p>
-                    <p>شبکه های اجتماعی</p>
+                <div className="flex justify-start">
+                    <div className="flex text-xs mt-5 ">
+                        <p className="">پشتیبانی</p>
+                        <p className="mr-10">شبکه های اجتماعی</p>
+                    </div>
                 </div>
                 <div className="mt-5 flex justify-between">
                     <div className="flex justify-center">
@@ -104,7 +106,7 @@ export default function index() {
                     </div>
                 </div>
                 <div className="mt-5 flex justify-center">
-                    <p className="text-xs">
+                    <p className="text-xs text-center">
                         © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.
                     </p>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import ActiveLink from './activLink';
 
@@ -14,6 +14,7 @@ import WhatsApp from '@assets/svg/icons/whatsapp.svg';
 import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
+    const router = useRouter();
     const [screen, setScreen] = useState<number>(0);
     const [menu, setMenu] = useState<boolean>(false);
 
@@ -24,11 +25,18 @@ export default function index() {
         });
     }, []);
 
+    const handleClick = (e: any) => {
+        router.push('/');
+        setTimeout(() => {
+            alert('scrollTo');
+        }, 5000);
+    };
+
     return (
         <div className="relative w-full max-w-8xl mx-auto  flex flex-col">
             <div className={` relative lg:block md:block hidden`}>
                 <div
-                    className={` lg:px-20 p-5 fixed w-full top-0 z-10  ${
+                    className={` lg:px-20 md:px-14 p-5 fixed w-full top-0 z-10  ${
                         screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
                     }`}
                 >
@@ -40,45 +48,30 @@ export default function index() {
                                     <ActiveLink href="/">
                                         <p>شاپیفای</p>
                                     </ActiveLink>
-                                    {/* <Link href="/">
-                                        <a>شاپیفای</a>
-                                    </Link> */}
                                 </p>
                             </div>
                             <div className="flex mt-4 text-sm list">
-                                <div className={`  mr-12 cursor-pointer active`}>
+                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/question">
                                         <p>سوالات متداول</p>
                                     </ActiveLink>
-                                    {/* <Link href="/question">
-                                        <a>سوالات متداول</a>
-                                    </Link> */}
                                 </div>
 
-                                <div className={`  mr-12 cursor-pointer active`}>
+                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/tariffs">
                                         <p> تعرفه ها</p>
                                     </ActiveLink>
-                                    {/* <Link href="/tariffs">
-                                        <a> تعرفه ها</a>
-                                    </Link> */}
                                 </div>
 
-                                <div className={`  mr-12 cursor-pointer active`}>
+                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/contact">
                                         <p> تماس با ما</p>
                                     </ActiveLink>
-                                    {/* <Link href="/contact">
-                                        <a> تماس با ما</a>
-                                    </Link> */}
                                 </div>
-                                <div className={`   mr-12 cursor-pointer active`}>
+                                <div className={`   lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/about">
                                         <p> درباره ما</p>
                                     </ActiveLink>
-                                    {/* <Link href="/about">
-                                        <a> درباره ما</a>
-                                    </Link> */}
                                 </div>
                             </div>
                         </div>
@@ -121,33 +114,37 @@ export default function index() {
                         <div className="p-7">
                             <ul>
                                 <li className="mt-5">
-                                    <Link href="/">
+                                    <ActiveLink href="/">
                                         <a>خانه</a>
-                                    </Link>
+                                    </ActiveLink>
                                 </li>
                                 <li className="mt-5">
-                                    <Link href="/question">
+                                    <ActiveLink href="/question">
                                         <a>سوالات متداول</a>
-                                    </Link>
+                                    </ActiveLink>
                                 </li>
                                 <li className="mt-5">
-                                    <Link href="/tariffs">
+                                    <ActiveLink href="/tariffs">
                                         <a> تعرفه ها</a>
-                                    </Link>
+                                    </ActiveLink>
                                 </li>
                                 <li className="mt-5">
-                                    <Link href="/contact">
+                                    <ActiveLink href="/contact">
                                         <a> تماس با ما</a>
-                                    </Link>
+                                    </ActiveLink>
                                 </li>
                                 <li className="mt-5">
-                                    <Link href="/about">
+                                    <ActiveLink href="/about">
                                         <a> درباره ما</a>
-                                    </Link>
+                                    </ActiveLink>
+                                    {/* <Link href="/about"></Link> */}
                                 </li>
                             </ul>
                             <div>
-                                <button className="text-white bg-green-550 p-2 w-full mt-5 ">
+                                <button
+                                    className="text-white bg-green-550 p-2 w-full mt-5 "
+                                    onClick={(e) => handleClick(e)}
+                                >
                                     دانلود شاپیفای
                                 </button>
                             </div>

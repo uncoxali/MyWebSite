@@ -19,7 +19,7 @@ const activLink: FC<Props> = ({ href, children }) => {
             <div
                 className={`${
                     router.asPath === href ? 'bg-green-550' : ''
-                } w-16 h-1  absolute top-0`}
+                } w-16 h-1  absolute top-0 lg:block md:block hidden`}
             ></div>
             <Link href={href}>
                 <a
