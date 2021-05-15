@@ -15,7 +15,7 @@ export default function index() {
             <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
-                        <div className=" lg:w-full ">
+                        <div className=" lg:w-full md:flex justify-center">
                             <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
                     </div>
@@ -85,7 +85,7 @@ export default function index() {
                 </div>
                 <div className="mt-5 flex justify-between">
                     <div className="flex justify-center">
-                        <p className="text-xs mt-7" style={{ color: '#707A90' }}>
+                        <p className="text-xs mt-5" style={{ color: '#707A90' }}>
                             گفتگو با پشتیبانی انلاین
                         </p>
                     </div>

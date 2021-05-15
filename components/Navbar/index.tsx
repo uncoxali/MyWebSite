@@ -26,10 +26,11 @@ export default function index() {
     }, []);
 
     const handleClick = (e: any) => {
-        router.push('/');
-        setTimeout(() => {
-            alert('scrollTo');
-        }, 5000);
+        router.push({
+            pathname: '/',
+            query: { id: 1 },
+        });
+        setMenu(false);
     };
 
     return (

@@ -37,7 +37,7 @@ export default function index() {
     return (
         <div className="bg-green-10">
             <Navbar />
-            <div className=" mt-20 w-full lg:px-32 md:px-28 px-10">
+            <div className=" mt-20 w-full lg:px-36 md:px-28 px-10">
                 <div className="">
                     <div className="mt-32 ">
                         <p className="text-2xl font-bold" style={{ color: '#4C5364' }}>
@@ -58,7 +58,7 @@ export default function index() {
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-14">
+                        <div className="flex justify-between mt-6">
                             <p className={`${drop1 && true ? 'text-blue-500' : ''} mt-3`}>
                                 برای باز کردن حساب چه مدارکی لازم است؟
                             </p>
@@ -71,7 +71,7 @@ export default function index() {
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-14">
+                        <div className="flex justify-between mt-6">
                             <p className={`${drop2 && true ? 'text-blue-500' : ''} mt-3`}>
                                 من کارت ملی هوشمند ندارم و برگه رسید کارت ملی هوشمند را گم کرده‌ام،
                                 چطور می‌توانم حساب بازکنم؟
@@ -85,7 +85,7 @@ export default function index() {
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-14">
+                        <div className="flex justify-between mt-6">
                             <p className={`${drop3 && true ? 'text-blue-500' : ''} mt-3`}>
                                 مراحل بازکردن حساب چقدر زمان می‌برد؟
                             </p>

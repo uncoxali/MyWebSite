@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 interface Props {
-    href: any;
+    href: string;
     children: any;
 }
 const activLink: FC<Props> = ({ href, children }) => {

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useRouter } from 'next/router';
 
 import data from 'data.json';
 import cn from 'classnames';
@@ -25,8 +26,12 @@ import Chart from '@assets/svg/shopify/chart.svg';
 import Style from './style.module.css';
 
 export default function index() {
+    const [video, setVideo] = useState<any>(true);
     const [page, setPage] = useState<string>('p');
     const div = useRef<any>(null);
+
+    const router = useRouter();
+    const { id } = router.query;
 
     const handleClick = () => {
         let a = page;
@@ -36,6 +41,11 @@ export default function index() {
 
         setPage(a);
     };
+
+    React.useEffect(() => {
+        if (id && 1) div.current.scrollIntoView({ behavior: 'smooth' });
+        if (id && 0) console.log('no');
+    }, []);
 
     const download = () => {
         div.current.scrollIntoView({
@@ -165,10 +175,10 @@ export default function index() {
                         <Bounce delay={500}>
                             <div className=" flex justify-center mt-20">
                                 <video
-                                    className=" lg:mr-60 w-72"
+                                    className=" lg:mr-60 w-72 video"
                                     src="/images/video.mp4"
-                                    preload="metadata"
-                                    autoPlay
+                                    autoPlay={true}
+                                    controls
                                 />
                             </div>
                         </Bounce>
