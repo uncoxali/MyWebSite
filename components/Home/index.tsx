@@ -6,6 +6,7 @@ import cn from 'classnames';
 
 import Footer from '@components/Footer';
 import { Fade, Bounce, Zoom, Flip } from 'react-awesome-reveal';
+import useTranslation from 'next-translate/useTranslation';
 
 import Alarm from '@assets/svg/shopify/alarm.svg';
 import Heart from '@assets/svg/shopify/heart.svg';
@@ -53,10 +54,19 @@ export default function index() {
         });
     };
 
+    const { t, lang } = useTranslation();
+
+    const isRTL = lang === 'ar' || lang === 'he';
+
+    const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
+
     const items = data.service;
 
     return (
-        <div className="relative w-full max-w-8xl mx-auto  flex flex-col min-h-screen">
+        <div
+            dir={isRTL ? 'rtl' : 'ltr'}
+            className={`relative w-full max-w-8xl mx-auto  flex flex-col min-h-screen ${arrow}`}
+        >
             <div className="bg-green-20 lg:p-32 md:p-20 lg:flex lg:justify-center w-full">
                 <div className="lg:flex">
                     <div className={`lg:h-96 lg:w-1/2  p-5 ${page == 'p' ? 'block' : 'hidden'} `}>
@@ -68,13 +78,10 @@ export default function index() {
                                         ' lg:text-4xl text-2xl mt-20 font-bold',
                                     )}
                                 >
-                                    تغییر کن تا آیندرو حس کنی{' '}
+                                    {t('home:title')}
                                 </p>
                                 <p className="mt-5 lg:text-base leading-9 text-sm flex justify-center">
-                                    <p className={cn(Style.alltext, 'leading-8')}>
-                                        {' '}
-                                        {data.titlePageOne}
-                                    </p>
+                                    <p className={cn(Style.alltext, 'leading-8')}>{t('home:p')}</p>
                                 </p>
                             </div>
                         </Fade>
@@ -125,10 +132,10 @@ export default function index() {
                         <Fade direction="right" delay={500}>
                             <div className="px-7 mt-20">
                                 <p className={cn(Style.title, ' lg:text-4xl text-2xl font-bold')}>
-                                    تغییر کن تا آیندرو حس کنی{' '}
+                                    {t('home:title')}
                                 </p>
                                 <p className={cn(Style.alltext, 'mt-5 text-base leading-9')}>
-                                    {data.titlePageTwo}
+                                    {t('home:p')}
                                 </p>
                             </div>
                         </Fade>
@@ -139,7 +146,7 @@ export default function index() {
                                         onClick={download}
                                         className="text-white bg-green-550 rounded-full p-2 w-36 mr-5"
                                     >
-                                        دانلود شاپیفای
+                                        {t('home:button')}
                                     </button>
                                 </div>
                                 <div className="flex ml-10">
@@ -177,8 +184,9 @@ export default function index() {
                                 <video
                                     className=" lg:mr-60 w-72 video"
                                     src="/images/video.mp4"
-                                    autoPlay={true}
-                                    controls
+                                    autoPlay
+                                    muted
+                                    loop
                                 />
                             </div>
                         </Bounce>
@@ -186,16 +194,16 @@ export default function index() {
                 </div>
             </div>
 
-            <div className="h-auto bg-green-10">
+            <div className="h-auto bg-green-10 mt-1">
                 <div className="-mt-9 ">
                     <div className="flex justify-center mt-10">
                         <div className="mt-16">
-                            <p className="text-xs text-gray-500">برخی از</p>
+                            <p className="text-xs text-gray-500">{t('home:t')}</p>
                         </div>
                     </div>
                     <div className="flex justify-center">
                         <div className={Style.text}>
-                            <p className="text-lg font-bold mt-2">سرویس های شاپیفای</p>
+                            <p className="text-lg font-bold mt-2">{t('home:h3')}</p>
                         </div>
                     </div>
 
@@ -213,8 +221,8 @@ export default function index() {
                                     </div>
 
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className=" text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
                                 <div className="">
@@ -227,8 +235,8 @@ export default function index() {
                                         <Time className="w-9  transform -rotate-180" />
                                     </div>
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className=" text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
                                 <div className="">
@@ -241,8 +249,8 @@ export default function index() {
                                         <Cart className="w-9" />
                                     </div>
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className=" text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
 
@@ -256,8 +264,8 @@ export default function index() {
                                         <Location className="w-7  transform rotate-180" />
                                     </div>
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className=" text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
                                 <div className="">
@@ -270,8 +278,8 @@ export default function index() {
                                         <Heart className="w-9" />
                                     </div>
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className=" text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
                                 <div className="ml-3">
@@ -284,8 +292,8 @@ export default function index() {
                                         <Alarm className="w-9  transform rotate-180" />
                                     </div>
                                     <div className="ml-3 mt-2">
-                                        <p className="">فروشگاه آنلاین</p>
-                                        <p className="mr-2 opacity-60">online shop</p>
+                                        <p className="">{t('home:h4')}</p>
+                                        <p className="text-xs mr-3 opacity-60">{t('home:h4')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -298,12 +306,12 @@ export default function index() {
                         <div className="lg:flex lg:px-16 p-5 lg:justify-around">
                             <div className="lg:w-1/2 mt-24">
                                 <p className={cn(Style.text, 'text-xl font-bold ')}>
-                                    سادگی خرید فقط با 3 حرکت
+                                    {t('home:p-title')}
                                 </p>
                                 <p className={cn(Style.alltext, 'mt-7 lg:text-base text-sm ')}>
-                                    <p className="leading-8">{data.titlePageThree}</p>
+                                    <p className="leading-8">{t('home:h5')}</p>
                                 </p>
-                                <p className="opacity-60 mt-10 text-xs">اطلاعات بیشتر</p>
+                                <p className="opacity-60 mt-10 text-xs">{t('home:h6')}</p>
                             </div>
                             <div className="-mt-14 flex justify-center">
                                 <PageCard className="w-72" />
@@ -314,12 +322,10 @@ export default function index() {
 
                 <div className="lg:px-28 md:px-24">
                     <div className="flex justify-center">
-                        <p className="text-sm opacity-70">مهمترین مزایا</p>
+                        <p className="text-sm opacity-70">{t('home:h7')}</p>
                     </div>
                     <div className="flex justify-center">
-                        <p className={cn(Style.text, 'text-xl mt-2 font-bold ')}>
-                            سرویس های شاپیفای
-                        </p>
+                        <p className={cn(Style.text, 'text-xl mt-2 font-bold ')}>{t('home:h3')}</p>
                     </div>
                     <div className="lg:flex lg:px-28 lg:justify-between md:justify-between mt-16 px-12">
                         <Fade direction="up" delay={300}>

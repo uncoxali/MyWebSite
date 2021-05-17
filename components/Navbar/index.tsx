@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import ActiveLink from './activLink';
+import cn from 'classnames';
 
 import Logo from '@assets/svg/shopify/logo.svg';
 import LogoShop from '@assets/svg/shopify/logoshop.svg';
@@ -12,11 +14,13 @@ import Youtube from '@assets/svg/icons/youtube.svg';
 import Twitter from '@assets/svg/icons/twitter.svg';
 import WhatsApp from '@assets/svg/icons/whatsapp.svg';
 import Linkedin from '@assets/svg/icons/linkedin.svg';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function index() {
     const router = useRouter();
     const [screen, setScreen] = useState<number>(0);
     const [menu, setMenu] = useState<boolean>(false);
+    const [drop, setDrop] = useState<any>('');
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -32,6 +36,14 @@ export default function index() {
         });
         setMenu(false);
     };
+    const { locale } = router;
+    const changeLanguage = () => {
+        if (locale === 'en') setDrop('ar');
+        if (locale === 'ar') setDrop('en');
+    };
+
+    const { t, lang } = useTranslation();
+    const isRTL = lang === 'ar' || lang === 'en';
 
     return (
         <div className="relative w-full max-w-8xl mx-auto  flex flex-col">
@@ -43,11 +55,25 @@ export default function index() {
                 >
                     <div className="flex justify-between">
                         <div className="flex">
+                            <div>
+                                <div onClick={changeLanguage}>
+                                    <Link href="/" locale="en">
+                                        <p>{t('EN')}</p>
+                                    </Link>
+                                </div>
+
+                                <div onClick={changeLanguage}>
+                                    <Link href="/" locale="ar">
+                                        <p>{t('FA')}</p>
+                                    </Link>
+                                </div>
+                            </div>
+
                             <div className="flex cursor-pointer">
                                 <Logo />
                                 <p className="font-bold text-green-550 mr-3 mt-3">
                                     <ActiveLink href="/">
-                                        <p>شاپیفای</p>
+                                        <p>{t('home:logo')}</p>
                                     </ActiveLink>
                                 </p>
                             </div>
@@ -96,6 +122,19 @@ export default function index() {
                     } w-full h-20 top-0 fixed z-10`}
                 >
                     <div className="flex justify-center">
+                        <div>
+                            <div onClick={changeLanguage}>
+                                <Link href="/" locale="en">
+                                    <p>{t('EN')}</p>
+                                </Link>
+                            </div>
+
+                            <div onClick={changeLanguage}>
+                                <Link href="/" locale="ar">
+                                    <p>{t('FA')}</p>
+                                </Link>
+                            </div>
+                        </div>
                         <LogoShop className="mt-3" />
                         <p className="font-bold text-green-550 mr-3 mt-5 text-lg">شاپیفای</p>
                     </div>
