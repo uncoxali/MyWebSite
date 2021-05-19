@@ -42,7 +42,7 @@ export default function index() {
     const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
 
     return (
-        <div className="bg-green-10">
+        <div className="bg-green-10" dir={isRTL ? 'rtl' : 'ltr'}>
             <Navbar logo={t('question:logo')} />
             <div className=" mt-20 w-full lg:px-36 md:px-28 px-10">
                 <div className="">
@@ -52,61 +52,72 @@ export default function index() {
                         </p>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-14">
+                        <div
+                            className="flex justify-between mt-14  cursor-pointer"
+                            onClick={() => handleClick('1')}
+                        >
                             <p className={`${drop && true ? 'text-blue-500' : ''} mt-3`}>
-                                چگونه میتوانم حساب باز کنم
+                                {t('question:question1')}
                             </p>
-                            <p className="cursor-pointer text-4xl" onClick={() => handleClick('1')}>
+                            <p className="cursor-pointer text-4xl">
                                 {drop && true ? '_' : <Plus className="w-7 opacity-50" />}
                             </p>
                         </div>
                         <div className={`${drop && true ? 'block' : 'hidden'} mt-3`}>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <p>{t('question:p')}</p>
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-6">
+                        <div
+                            className="flex justify-between mt-6  cursor-pointer"
+                            onClick={() => handleClick('2')}
+                        >
                             <p className={`${drop1 && true ? 'text-blue-500' : ''} mt-3`}>
-                                برای باز کردن حساب چه مدارکی لازم است؟
+                                {t('question:question2')}
                             </p>
-                            <p className="cursor-pointer text-4xl" onClick={() => handleClick('2')}>
+                            <p className="cursor-pointer text-4xl">
                                 {drop1 && true ? '_' : <Plus className="w-7 opacity-50" />}
                             </p>
                         </div>
                         <div className={`${drop1 && true ? 'block' : 'hidden'} mt-3`}>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <p>{t('question:p')}</p>
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-6">
+                        <div
+                            className="flex justify-between mt-6  cursor-pointer"
+                            onClick={() => handleClick('3')}
+                        >
                             <p className={`${drop2 && true ? 'text-blue-500' : ''} mt-3`}>
-                                من کارت ملی هوشمند ندارم و برگه رسید کارت ملی هوشمند را گم کرده‌ام،
-                                چطور می‌توانم حساب بازکنم؟
+                                {t('question:question3')}
                             </p>
-                            <p className="cursor-pointer text-4xl" onClick={() => handleClick('3')}>
+                            <p className="cursor-pointer text-4xl">
                                 {drop2 && true ? '_' : <Plus className="w-7 opacity-50" />}
                             </p>
                         </div>
                         <div className={`${drop2 && true ? 'block' : 'hidden'} mt-3`}>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <p>{t('question:p')}</p>
                         </div>
                     </div>
                     <div>
-                        <div className="flex justify-between mt-6">
+                        <div
+                            className="flex justify-between mt-6 cursor-pointer"
+                            onClick={() => handleClick('4')}
+                        >
                             <p className={`${drop3 && true ? 'text-blue-500' : ''} mt-3`}>
-                                مراحل بازکردن حساب چقدر زمان می‌برد؟
+                                {t('question:question4')}
                             </p>
-                            <p className="cursor-pointer text-4xl" onClick={() => handleClick('4')}>
+                            <p className="cursor-pointer text-4xl">
                                 {drop3 && true ? '_' : <Plus className="w-7 opacity-50" />}
                             </p>
                         </div>
                         <div className={`${drop3 && true ? 'block' : 'hidden'} mt-3`}>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <p>{t('question:p')}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className=" bottom-0 w-full h-auto">
+            <div className=" bottom-0 w-full h-auto" dir="rtl">
                 <Footer />
             </div>
         </div>

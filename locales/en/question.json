@@ -1,4 +1,9 @@
 {
     "title": "common questions",
-    "logo": "Shopify"
+    "logo": "Shopify",
+    "question1": "How can I open an account?",
+    "p": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "question2": "What documents are required to open an account?",
+    "question3": "I do not have a national smart card and I have lost the national smart card receipt,How can I open an account?",
+    "question4": "How long does it take to open an account?"
 }

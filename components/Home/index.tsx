@@ -115,7 +115,7 @@ export default function index() {
                                                 page == 'p1'
                                                     ? 'bg-green-550 text-white'
                                                     : 'bg-white text-black'
-                                            }`,
+                                            } ${isRTL ? '' : 'ml-10'}`,
                                         )}
                                     >
                                         2
@@ -169,7 +169,7 @@ export default function index() {
                                                 page == 'p1'
                                                     ? 'bg-green-550 text-white'
                                                     : 'bg-white text-black'
-                                            }`,
+                                            }  ${isRTL ? '' : 'ml-10'}`,
                                         )}
                                     >
                                         2
@@ -178,9 +178,9 @@ export default function index() {
                             </div>
                         </Fade>
                     </div>
-                    <div className="lg:mr-20">
+                    <div className={`${isRTL ? 'lg:mr-20' : 'flex lg:ml-52'} `}>
                         <Bounce delay={500}>
-                            <div className=" flex justify-center mt-20">
+                            <div className={`flex justify-center mt-20`}>
                                 <video
                                     className=" lg:mr-60 w-72 video"
                                     src="/images/video.mp4"

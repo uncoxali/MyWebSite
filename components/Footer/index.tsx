@@ -1,4 +1,5 @@
 import React from 'react';
+import useTranslation from 'next-translate/useTranslation';
 
 import Footer_User from '@assets/svg/shopify/footer-user.svg';
 import GooglePlay from '@assets/svg/shopify/googleplay.svg';
@@ -10,8 +11,14 @@ import WhatsApp from '@assets/svg/icons/whatsapp.svg';
 import Linkedin from '@assets/svg/icons/linkedin.svg';
 
 export default function index() {
+    const { t, lang } = useTranslation();
+
+    const isRTL = lang === 'fa' || lang === 'he';
+
+    const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
+
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto" dir={isRTL ? 'rtl' : 'ltr'}>
             <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
@@ -19,49 +26,74 @@ export default function index() {
                             <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
                     </div>
-                    <div className="lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-5">
-                        <div className="lg:w-1/2 lg:h-80">
-                            <div className="px-3">
-                                <p className="text-lg text-white mt-3"> همین حالا دانلود کنید</p>
-                                <div className="lg:w-80">
-                                    <p className="text-white text-xs mt-3">
-                                        !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید
+                    <div
+                        className={`lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-5`}
+                    >
+                        <div className={`${isRTL ? '' : 'lg:ml-52 md:ml-48'} flex`}>
+                            <div className="lg:w-1/2 lg:h-80">
+                                <div className="px-3">
+                                    <p className="text-lg text-white mt-3">
+                                        {isRTL ? 'همین حالا دانلود کنید' : 'Download now'}
                                     </p>
+                                    <div className="lg:w-80">
+                                        <p className="text-white text-xs mt-3">
+                                            {isRTL
+                                                ? ' !!اپلیکیشن شاپیفای را میتونید از بستر های زیر دانلود کنید'
+                                                : 'You can download the Shapifa application from the following platforms do'}
+                                        </p>
+                                    </div>
                                 </div>
+                                <div className="flex mt-8 ">
+                                    <div className="">
+                                        <p className="text-white text-xs">
+                                            {isRTL ? 'نسخه ی اندروید' : 'Android Version'}
+                                        </p>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <GooglePlay className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <GooglePlay className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <GooglePlay className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="lg:mr-10 mr-2">
+                                        <p className="text-white text-xs">
+                                            {' '}
+                                            {isRTL ? 'نسخه ی IOS' : 'IOS Version'}
+                                        </p>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <AppleStore className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <AppleStore className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                            <AppleStore className="ml-2" />
+                                            <p className="text-xs text-white ">
+                                                دریافت از google play
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="h-10 w-full"></div>
                             </div>
-                            <div className="flex mt-8 ">
-                                <div className="">
-                                    <p className="text-white text-xs">نسخه ی اندروید</p>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <GooglePlay className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <GooglePlay className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <GooglePlay className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                </div>
-                                <div className="lg:mr-10 mr-2">
-                                    <p className="text-white text-xs">نسخه ی IOS</p>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <AppleStore className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <AppleStore className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                    <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                        <AppleStore className="ml-2" />
-                                        <p className="text-xs text-white ">دریافت از google play</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="h-10 w-full"></div>
                         </div>
                     </div>
                 </div>

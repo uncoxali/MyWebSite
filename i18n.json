@@ -6,6 +6,8 @@
         "/": ["home"],
         "/navbar": ["navbar"],
         "/about": ["about"],
-        "/question": ["question"]
+        "/question": ["question"],
+        "/contact": ["contact"],
+        "/footer": ["footer"]
     }
 }

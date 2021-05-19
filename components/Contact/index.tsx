@@ -3,6 +3,7 @@ import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
+import useTranslation from 'next-translate/useTranslation';
 
 interface IFormInputs {
     number: number;
@@ -20,64 +21,71 @@ export default function index() {
     } = useForm<IFormInputs>();
     const onSubmit: SubmitHandler<IFormInputs> = (data) => console.log(data);
 
+    const { t, lang } = useTranslation();
+
+    const isRTL = lang === 'fa' || lang === 'he';
+
+    const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
+
     return (
-        <div className="bg-green-10">
+        <div className="bg-green-10" dir={isRTL ? 'rtl' : 'ltr'}>
             <Navbar />
             <div className="h-scree w-full lg:px-40 md:px-36 px-5">
                 <div className="">
                     <p className="mt-36 font-bold" style={{ color: '#4c5364' }}>
-                        برای ارتباط با لینستو از فر زیر استفاده کنید
+                        {t('contact:title')}
                     </p>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mt-10">
-                        <p>شماره </p>
-                        <input
-                            {...register('number', { required: true })}
-                            type="number"
-                            placeholder="شماره موبایل خود را وارد کنید"
-                            className={` ${
-                                errors.number && 'border border-red-500 placeholder-red-500'
-                            } "placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
-                        />
-                    </div>
-                    <div className="mt-10">
-                        <p>ایمیل</p>
+                        <p>{t('contact:lable')}</p>
                         <input
                             {...register('email', { required: true })}
                             type="text"
-                            placeholder="ایمیل خود را وارد کنید"
+                            placeholder={
+                                isRTL
+                                    ? 'ایمیل یا شماره خود را وارد کنید'
+                                    : 'Enter your email or number'
+                            }
                             className={` ${
                                 errors.email && 'border border-red-500 placeholder-red-500'
-                            } "placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
+                            } placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
                         />
                     </div>
                     <div className="mt-10">
-                        <p>موضوع</p>
+                        <p>{t('contact:lable1')}</p>
                         <input
                             {...register('description', { required: true })}
                             type="text"
-                            placeholder="توضیحات سفارش رو اینجا بنویسید"
+                            placeholder={
+                                isRTL
+                                    ? 'توضیحات سفارش رو اینجا بنویسید'
+                                    : 'Write the order description here'
+                            }
                             className={` ${
                                 errors.description && 'border border-red-500 placeholder-red-500'
-                            } "placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
+                            } placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
                         />
                     </div>
                     <div className="mt-10">
-                        <p>توضیحات</p>
+                        <p>{t('contact:lable2')}</p>
                         <textarea
                             {...register('textarea', { required: true })}
-                            placeholder="توضیحات سفارش رو اینجا بنویسید"
+                            placeholder={
+                                isRTL
+                                    ? 'توضیحات سفارش رو اینجا بنویسید'
+                                    : 'Write the order description here'
+                            }
                             className={` ${
                                 errors.textarea && 'border border-red-500 placeholder-red-500'
                             } h-52 placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200`}
                         />
                     </div>
                     <div className="mt-7 relative">
-                        <p>ضمیمه ی فایل</p>
+                        <p>{t('contact:file')}</p>
                         <div className="bg-white h-14 px-5 lg:w-64 md:w-64 w-full mt-3 ">
                             <label htmlFor="upload-photo" className="absolute cursor-pointer mt-3">
-                                فایل را آپلود کنید
+                                {t('contact:file')}
                             </label>
 
                             <input
@@ -87,10 +95,12 @@ export default function index() {
                                 name="photo"
                                 id="upload-photo"
                             />
-                            {errors.upload && (
-                                <p className="text-red-400">فایل مورد نظر خود را آپلود کنید</p>
-                            )}
                         </div>
+                        {errors.upload && (
+                            <p className="text-red-400">
+                                {isRTL ? 'فایل مورد نظر خود را آپلود کنید' : 'upload file'}
+                            </p>
+                        )}
                     </div>
                     <div className="mt-5 ">
                         <button
