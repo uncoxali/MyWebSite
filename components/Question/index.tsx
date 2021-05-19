@@ -3,6 +3,7 @@ import Footer from '@components/Footer';
 import Navbar from '@components/Navbar';
 
 import Plus from '@assets/svg/icons/plus.svg';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function index() {
     const [drop, setDrop] = React.useState<boolean>(false);
@@ -34,14 +35,20 @@ export default function index() {
         }
     };
 
+    const { t, lang } = useTranslation();
+
+    const isRTL = lang === 'fa' || lang === 'he';
+
+    const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
+
     return (
         <div className="bg-green-10">
-            <Navbar />
+            <Navbar logo={t('question:logo')} />
             <div className=" mt-20 w-full lg:px-36 md:px-28 px-10">
                 <div className="">
                     <div className="mt-32 ">
                         <p className="text-2xl font-bold" style={{ color: '#4C5364' }}>
-                            پرسش های متداول
+                            {t('question:title')}
                         </p>
                     </div>
                     <div>

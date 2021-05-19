@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -16,7 +16,11 @@ import WhatsApp from '@assets/svg/icons/whatsapp.svg';
 import Linkedin from '@assets/svg/icons/linkedin.svg';
 import useTranslation from 'next-translate/useTranslation';
 
-export default function index() {
+interface Props {
+    logo?: string;
+}
+
+const Navbar: FC<Props> = ({ logo }) => {
     const router = useRouter();
     const [screen, setScreen] = useState<number>(0);
     const [menu, setMenu] = useState<boolean>(false);
@@ -38,15 +42,18 @@ export default function index() {
     };
     const { locale } = router;
     const changeLanguage = () => {
-        if (locale === 'en') setDrop('ar');
-        if (locale === 'ar') setDrop('en');
+        if (locale === 'en') setDrop('fa');
+        if (locale === 'fa') setDrop('en');
     };
 
     const { t, lang } = useTranslation();
-    const isRTL = lang === 'ar' || lang === 'en';
+    const isRTL = lang === 'fa' || lang === 'he';
 
     return (
-        <div className="relative w-full max-w-8xl mx-auto  flex flex-col">
+        <div
+            dir={isRTL ? 'rtl' : 'ltr'}
+            className="relative w-full max-w-8xl mx-auto  flex flex-col"
+        >
             <div className={` relative lg:block md:block hidden`}>
                 <div
                     className={` lg:px-20 md:px-14 p-5 fixed w-full top-0 z-10  ${
@@ -63,7 +70,7 @@ export default function index() {
                                 </div>
 
                                 <div onClick={changeLanguage}>
-                                    <Link href="/" locale="ar">
+                                    <Link href="/" locale="fa">
                                         <p>{t('FA')}</p>
                                     </Link>
                                 </div>
@@ -73,31 +80,35 @@ export default function index() {
                                 <Logo />
                                 <p className="font-bold text-green-550 mr-3 mt-3">
                                     <ActiveLink href="/">
-                                        <p>{t('home:logo')}</p>
+                                        <p>{lang === 'fa' ? 'شاپیفای' : 'shopify'}</p>
                                     </ActiveLink>
                                 </p>
                             </div>
                             <div className="flex mt-4 text-sm list">
-                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
+                                <div
+                                    className={`lg:mr-12 md:mr-5 cursor-pointer ${
+                                        isRTL ? 'mr-5' : 'ml-10'
+                                    } `}
+                                >
                                     <ActiveLink href="/question">
-                                        <p>سوالات متداول</p>
+                                        <p>{lang === 'fa' ? 'سوالات متداول' : 'Question'}</p>
                                     </ActiveLink>
                                 </div>
 
-                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
+                                <div className={`lg:mr-12 md:mr-5 cursor-pointer `}>
                                     <ActiveLink href="/tariffs">
-                                        <p> تعرفه ها</p>
+                                        <p>{lang === 'fa' ? ' تعرفه ها' : 'Pricing'}</p>
                                     </ActiveLink>
                                 </div>
 
-                                <div className={`  lg:mr-12 md:mr-5 cursor-pointer active`}>
+                                <div className={`lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/contact">
-                                        <p> تماس با ما</p>
+                                        <p>{lang === 'fa' ? ' تماس با ما' : 'Contact Us'}</p>
                                     </ActiveLink>
                                 </div>
-                                <div className={`   lg:mr-12 md:mr-5 cursor-pointer active`}>
+                                <div className={`lg:mr-12 md:mr-5 cursor-pointer active`}>
                                     <ActiveLink href="/about">
-                                        <p> درباره ما</p>
+                                        <p>{lang === 'fa' ? '  درباره ما' : 'About Us'}</p>
                                     </ActiveLink>
                                 </div>
                             </div>
@@ -130,13 +141,15 @@ export default function index() {
                             </div>
 
                             <div onClick={changeLanguage}>
-                                <Link href="/" locale="ar">
+                                <Link href="/" locale="fa">
                                     <p>{t('FA')}</p>
                                 </Link>
                             </div>
                         </div>
                         <LogoShop className="mt-3" />
-                        <p className="font-bold text-green-550 mr-3 mt-5 text-lg">شاپیفای</p>
+                        <p className="font-bold text-green-550 mr-3 mt-5 text-lg">
+                            <p>{lang === 'fa' ? 'شاپیفای' : 'shopify'}</p>
+                        </p>
                     </div>
                     <div className="-mt-6 px-5 flex">
                         <Menu className="cursor-pointer" onClick={() => setMenu(true)} />
@@ -146,7 +159,7 @@ export default function index() {
             {menu == true && (
                 <div className="lg:hidden md:hidden block top-0 absolute z-10 w-full">
                     <div className="w-full h-screen bg-white fixed">
-                        <div className="flex justify-end ml-5">
+                        <div className={`flex ${isRTL ? 'justify-end ml-5' : 'justify-end mr-10'}`}>
                             <button className="text-3xl mt-10 ml-5" onClick={() => setMenu(false)}>
                                 <Close />
                             </button>
@@ -155,27 +168,27 @@ export default function index() {
                             <ul>
                                 <li className="mt-5">
                                     <ActiveLink href="/">
-                                        <a>خانه</a>
+                                        <p>{lang === 'fa' ? 'خانه' : 'Home'}</p>
                                     </ActiveLink>
                                 </li>
                                 <li className="mt-5">
                                     <ActiveLink href="/question">
-                                        <a>سوالات متداول</a>
+                                        <p>{lang === 'fa' ? 'سوالات متداول' : 'Question'}</p>
                                     </ActiveLink>
                                 </li>
                                 <li className="mt-5">
                                     <ActiveLink href="/tariffs">
-                                        <a> تعرفه ها</a>
+                                        <p>{lang === 'fa' ? ' تعرفه ها' : 'Pricing'}</p>
                                     </ActiveLink>
                                 </li>
                                 <li className="mt-5">
                                     <ActiveLink href="/contact">
-                                        <a> تماس با ما</a>
+                                        <p>{lang === 'fa' ? ' تماس با ما' : 'Contact Us'}</p>
                                     </ActiveLink>
                                 </li>
                                 <li className="mt-5">
                                     <ActiveLink href="/about">
-                                        <a> درباره ما</a>
+                                        <p>{lang === 'fa' ? '  درباره ما' : 'About Us'}</p>
                                     </ActiveLink>
                                     {/* <Link href="/about"></Link> */}
                                 </li>
@@ -211,4 +224,6 @@ export default function index() {
             )}
         </div>
     );
-}
+};
+
+export default Navbar;

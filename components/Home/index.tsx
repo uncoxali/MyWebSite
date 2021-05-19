@@ -56,7 +56,7 @@ export default function index() {
 
     const { t, lang } = useTranslation();
 
-    const isRTL = lang === 'ar' || lang === 'he';
+    const isRTL = lang === 'fa' || lang === 'he';
 
     const arrow = isRTL ? String.fromCharCode(8592) : String.fromCharCode(8594);
 
@@ -92,7 +92,7 @@ export default function index() {
                                         onClick={download}
                                         className="text-white bg-green-550 rounded-full p-2 w-36 mr-5"
                                     >
-                                        دانلود شاپیفای
+                                        {t('home:button')}
                                     </button>
                                 </div>
                                 <div className="flex ml-10">
@@ -338,13 +338,12 @@ export default function index() {
                                         <div className="px-5">
                                             <div className="flex justify-center">
                                                 <p className="text-lg opacity-75 font-bold">
-                                                    {items[0].title}
+                                                    {t('home:h5-title1')}
                                                 </p>
                                             </div>
                                             <p className="text-xs mt-5  text-center">
                                                 <p className={cn(Style.alltext, 'leading-5')}>
-                                                    {' '}
-                                                    {items[0].decription}
+                                                    {t('home:p1')}
                                                 </p>
                                             </p>
                                         </div>
@@ -362,12 +361,12 @@ export default function index() {
                                         <div className="px-5">
                                             <div className="flex justify-center">
                                                 <p className="text-lg opacity-75 font-bold">
-                                                    {items[1].title}
+                                                    {t('home:h5-title2')}
                                                 </p>
                                             </div>
                                             <p className="text-xs mt-5  text-center">
                                                 <p className={cn(Style.alltext, 'leading-5')}>
-                                                    {items[1].decription}
+                                                    {t('home:p1')}
                                                 </p>
                                             </p>
                                         </div>
@@ -385,12 +384,12 @@ export default function index() {
                                         <div className="px-5">
                                             <div className="flex justify-center">
                                                 <p className="text-lg opacity-70 font-bold">
-                                                    {items[2].title}
+                                                    {t('home:h5-title3')}
                                                 </p>
                                             </div>
                                             <p className="text-xs mt-5 text-center">
                                                 <p className={cn(Style.alltext, 'leading-5')}>
-                                                    {items[2].decription}
+                                                    {t('home:p1')}
                                                 </p>
                                             </p>
                                         </div>
@@ -403,10 +402,10 @@ export default function index() {
                 <div className="lg:mt-32 mt-20 ">
                     <div className="">
                         <div className="flex justify-center">
-                            <p className="text-sm opacity-70 ">چرا بی استفاده</p>
+                            <p className="text-sm opacity-70 ">{t('home:h8')}</p>
                         </div>
                         <div className="flex justify-center">
-                            <p className={cn(Style.text, 'font-bold mt-2')}>سرویس هاس شاپیفای</p>
+                            <p className={cn(Style.text, 'font-bold mt-2')}>{t('home:h3')}</p>
                         </div>
                     </div>
 
@@ -415,29 +414,32 @@ export default function index() {
                             <Chart className="lg:w-5/6" />
                         </div>
                     </Fade>
-                    <div className=" lg:px-28 lg:mt-5 md:mt-5 -mt-48">
+                    <div
+                        className={` lg:px-28 lg:mt-5 md:mt-5 -mt-48`}
+                        style={{ direction: 'rtl' }}
+                    >
                         <div className="flex justify-between">
                             <div className="w-1/2 lg:px-20 p-3">
                                 <div className="flex justify-center">
                                     <p className="lg:text-lg text-sm font-bold text-green-550">
-                                        فروش با استفاده از لینستو
+                                        {t('home:h9')}
                                     </p>
                                 </div>
                                 <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
-                                    {data.titlePageFour}
+                                    {t('home:p-title1')}
                                 </p>
                                 <div className="mt-16 flex justify-center">
                                     <Tik />
                                 </div>
                             </div>
-                            <div className="w-1/2 lg:px-20 p-3">
+                            <div className="w-1/2 lg:px-20 p-3 ">
                                 <div className="flex justify-center">
                                     <p className="lg:text-lg text-sm font-bold text-indigo-400">
-                                        فروش از راه قدیمی{' '}
+                                        {t('home:h10')}
                                     </p>
                                 </div>
                                 <p className="mt-2 lg:text-sm text-xs text-center p-2 opacity-70">
-                                    {data.titlePageFour}
+                                    {t('home:p-title1')}
                                 </p>
                                 <div className="mt-16 flex justify-center">
                                     <Close />
@@ -446,70 +448,62 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className="" style={{ direction: 'rtl' }}>
                     <div className="lg:flex  lg:mr-52 mt-28 lg:px-10">
                         <div className=" h-72 lg:w-1/2 lg:mt-10 px-5 ">
                             <Fade direction="right">
-                                <div className="flex justify-start">
-                                    <p className={cn(Style.text, 'text-lg font-bold text-left')}>
-                                        سادگی خرید فقط با 3 حرکت
+                                <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
+                                    <div className="">
+                                        <p className={cn(Style.text, 'text-lg font-bold')}>
+                                            {t('home:p-title')}
+                                        </p>
+                                    </div>
+                                    <p className={cn(Style.alltext, 'mt-3 text-sm  leading-7')}>
+                                        {t('home:p-title2')}
                                     </p>
                                 </div>
-                                <p
-                                    className={cn(
-                                        Style.alltext,
-                                        'mt-3 text-sm text-right leading-7',
-                                    )}
-                                >
-                                    {data.titlePageFive}
-                                </p>
                             </Fade>
                             <Zoom>
-                                <div className="flex justify-center">
+                                <div className="flex justify-center" dir={isRTL ? 'rtl' : 'ltr'}>
                                     <div
                                         className={cn(Style.alltext, 'lg:mt-20 lg:w-80 ml-5 mt-10')}
                                     >
                                         <div className="flex">
                                             <Tik1 className="w-7" />
                                             <p className="mt-2 text-xs mr-3">
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                                صنعت چاپ
+                                                {t('home:p-title3')}
                                             </p>
                                         </div>
                                         <div className="flex mt-3">
                                             <Tik1 className="w-7" />
 
                                             <p className="mt-2 text-xs mr-3">
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                                صنعت چاپ
+                                                {t('home:p-title3')}
                                             </p>
                                         </div>
                                         <div className="flex mt-3">
                                             <Tik1 className="w-7" />
 
                                             <p className="mt-2 text-xs mr-3">
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                                صنعت چاپ
+                                                {t('home:p-title3')}
                                             </p>
                                         </div>
                                         <div className="flex mt-3">
                                             <Tik1 className="w-7" />
 
                                             <p className="mt-2 text-xs mr-3">
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                                صنعت چاپ
+                                                {t('home:p-title3')}
                                             </p>
                                         </div>
                                         <div className="flex mt-3">
                                             <Tik1 className="w-7" />
                                             <p className="mt-2 text-xs mr-3">
-                                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
-                                                صنعت چاپ
+                                                {t('home:p-title3')}
                                             </p>
                                         </div>
                                         <div className="lg:mt-28 mt-10 flex justify-center">
                                             <button className="text-white bg-green-550 rounded-full p-2 w-40">
-                                                دانلود شاپیفای
+                                                {t('home:button')}
                                             </button>
                                         </div>
                                     </div>
@@ -526,12 +520,12 @@ export default function index() {
                                         <div className="rounded-l-3xl bg-white w-auto h-auto">
                                             <div className="flex justify-center">
                                                 <p className="mt-3 text-sm font-bold text-gray-700">
-                                                    سادگی و سهولت خرید
+                                                    {t('home:h2')}
                                                 </p>
                                             </div>
                                             <div className="p-5">
                                                 <p className=" text-xs text-center opacity-80">
-                                                    {data.cartText}
+                                                    {t('home:p-1')}
                                                 </p>
                                             </div>
                                         </div>
@@ -543,12 +537,12 @@ export default function index() {
                                         <div className="rounded-r-3xl bg-white w-auto  h-auto">
                                             <div className="flex justify-center">
                                                 <p className="mt-3 text-sm font-bold text-gray-700">
-                                                    سادگی و سهولت خرید
+                                                    {t('home:h2')}
                                                 </p>
                                             </div>
                                             <div className="p-5">
                                                 <p className=" text-xs text-center opacity-80">
-                                                    {data.cartText}
+                                                    {t('home:p-1')}
                                                 </p>
                                             </div>
                                         </div>
@@ -566,12 +560,12 @@ export default function index() {
                                         <div className="rounded-l-3xl bg-white w-au h-auto">
                                             <div className="flex justify-center">
                                                 <p className="mt-3 text-sm font-bold text-gray-700">
-                                                    سادگی و سهولت خرید
+                                                    {t('home:h2')}
                                                 </p>
                                             </div>
                                             <div className="p-5">
                                                 <p className=" text-xs text-center opacity-80">
-                                                    {data.cartText}
+                                                    {t('home:p-1')}
                                                 </p>
                                             </div>
                                         </div>
@@ -581,7 +575,7 @@ export default function index() {
                         </Fade>
                     </div>
                 </div>
-                <div ref={div} className="">
+                <div ref={div} className="" dir="rtl">
                     <Footer />
                 </div>
             </div>
