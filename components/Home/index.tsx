@@ -92,7 +92,7 @@ export default function index() {
                                         onClick={download}
                                         className={`${
                                             isRTL ? 'mr-5' : 'ml-5'
-                                        } text-white bg-green-550 rounded-full p-2 w-36`}
+                                        } text-white bg-green-550 rounded-full p-2 w-36 outline-none`}
                                     >
                                         {t('home:button')}
                                     </button>
@@ -146,7 +146,7 @@ export default function index() {
                                 <div>
                                     <button
                                         onClick={download}
-                                        className="text-white bg-green-550 rounded-full p-2 w-36 mr-5"
+                                        className="text-white bg-green-550 rounded-full p-2 w-36 mr-5 outline-none"
                                     >
                                         {t('home:button')}
                                     </button>
@@ -464,7 +464,7 @@ export default function index() {
                     <div className="lg:flex  lg:mr-52 mt-28 lg:px-10">
                         <div className=" h-72 lg:w-1/2 lg:mt-10 px-5 ">
                             <Fade direction="right">
-                                <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
+                                <div className={`px-5 ${isRTL ? 'text-right' : 'text-left'}`}>
                                     <div className="">
                                         <p className={cn(Style.text, 'text-lg font-bold')}>
                                             {t('home:p-title')}
@@ -510,7 +510,7 @@ export default function index() {
                             </Zoom>
                         </div>
                         <Fade>
-                            <div className="p-5 lg:mt-0 mt-64 lg:h-screen lg:flex justify-center">
+                            <div className="p-5 lg:mt-0 mt-44 lg:h-screen lg:flex justify-center">
                                 <div className="lg:w-1/2 ">
                                     <Fade delay={400}>
                                         <div className="flex justify-center">

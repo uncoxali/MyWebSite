@@ -24,7 +24,7 @@ const Navbar: FC<Props> = ({ logo }) => {
     const router = useRouter();
     const [screen, setScreen] = useState<number>(0);
     const [menu, setMenu] = useState<boolean>(false);
-    const [drop, setDrop] = useState<any>('');
+    const [change, setChange] = useState<any>('');
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -45,6 +45,13 @@ const Navbar: FC<Props> = ({ logo }) => {
     const { t, lang } = useTranslation();
     const isRTL = lang === 'fa' || lang === 'he';
 
+    const handleChange = (e: any) => {
+        let a = e.target.value;
+        // router.push('/', '/', { locale: 'fa' });
+        if (a === 'EN') router.push('/', '/', { locale: 'en' });
+        if (a === 'FA') router.push('/', '/', { locale: 'fa' });
+    };
+
     return (
         <div
             dir={isRTL ? 'rtl' : 'ltr'}
@@ -58,19 +65,6 @@ const Navbar: FC<Props> = ({ logo }) => {
                 >
                     <div className="flex justify-between">
                         <div className="flex">
-                            <div>
-                                <div>
-                                    <Link href="/" locale="en">
-                                        <p>{isRTL ? 'FA' : 'EN'}</p>
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link href="/" locale="fa">
-                                        <p>{isRTL ? 'FA' : 'EN'}</p>
-                                    </Link>
-                                </div>
-                            </div>
-
                             <div className="flex cursor-pointer">
                                 <Logo />
                                 <p className="font-bold text-green-550 mr-3 mt-3">
@@ -106,8 +100,18 @@ const Navbar: FC<Props> = ({ logo }) => {
                                         <p>{lang === 'fa' ? '  درباره ما' : 'About Us'}</p>
                                     </ActiveLink>
                                 </div>
+                                <select
+                                    className={`${
+                                        isRTL ? 'mr-10' : 'ml-2'
+                                    } bg-transparent -mt-3 outline-none`}
+                                    onChange={(e: any) => handleChange(e)}
+                                >
+                                    <option value="EN">EN</option>
+                                    <option value="FA">FA</option>
+                                </select>
                             </div>
                         </div>
+
                         <div className="flex mt-3 left-5">
                             <div>
                                 <h5 className="font-bold text-green-550 mr-6">
@@ -129,27 +133,27 @@ const Navbar: FC<Props> = ({ logo }) => {
                         screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
                     } w-full h-20 top-0 fixed z-10`}
                 >
-                    <div className="flex justify-center">
-                        <div>
-                            <div>
-                                <Link href="/" locale="en">
-                                    <p>{t('EN')}</p>
-                                </Link>
-                            </div>
-
-                            <div>
-                                <Link href="/" locale="fa">
-                                    <p>{t('FA')}</p>
-                                </Link>
-                            </div>
+                    <div className="flex justify-between">
+                        <div className="px-5 mt-6">
+                            <Menu className="cursor-pointer" onClick={() => setMenu(true)} />
                         </div>
-                        <LogoShop className="mt-3" />
-                        <p className="font-bold text-green-550 mr-3 mt-5 text-lg">
-                            <p>{lang === 'fa' ? 'شاپیفای' : 'shopify'}</p>
-                        </p>
-                    </div>
-                    <div className="-mt-6 px-5 flex">
-                        <Menu className="cursor-pointer" onClick={() => setMenu(true)} />
+                        <div className="flex cursor-pointer">
+                            <LogoShop className="mt-3" />
+                            <p className="font-bold text-green-550 mr-3 mt-5 text-lg">
+                                <Link href="/">
+                                    <p>{lang === 'fa' ? 'شاپیفای' : 'shopify'}</p>
+                                </Link>
+                            </p>
+                        </div>
+                        <select
+                            className={`${
+                                isRTL ? 'ml-6' : 'mr-6'
+                            } bg-transparent mt-6 outline-none`}
+                            onChange={(e: any) => handleChange(e)}
+                        >
+                            <option value="EN">EN</option>
+                            <option value="FA">FA</option>
+                        </select>
                     </div>
                 </div>
             </div>

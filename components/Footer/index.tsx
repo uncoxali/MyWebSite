@@ -23,7 +23,9 @@ export default function index() {
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
                         <div
-                            className={` lg:w-full md:flex justify-center ${isRTL ? '' : 'ml-14'}`}
+                            className={` lg:w-full md:flex justify-center ${
+                                isRTL ? 'mr-5' : 'ml-14'
+                            }`}
                         >
                             <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
