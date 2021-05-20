@@ -114,7 +114,7 @@ export default function index() {
                     </div>
                 </div>
             </div>
-            <div className=" bottom-0 w-full h-auto mt-44" dir="rtl">
+            <div className=" bottom-0 w-full h-auto lg:mt-0 md:mt-0 mt-80" dir="rtl">
                 <Footer />
             </div>
         </div>

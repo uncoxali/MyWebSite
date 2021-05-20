@@ -69,7 +69,7 @@ export default function index() {
                     </div>
                     <div>
                         <div
-                            className="flex justify-between mt-6  cursor-pointer"
+                            className="flex justify-between mt-2  cursor-pointer"
                             onClick={() => handleClick('2')}
                         >
                             <p className={`${drop1 && true ? 'text-blue-500' : ''} mt-3`}>
@@ -85,7 +85,7 @@ export default function index() {
                     </div>
                     <div>
                         <div
-                            className="flex justify-between mt-6  cursor-pointer"
+                            className="flex justify-between mt-2  cursor-pointer"
                             onClick={() => handleClick('3')}
                         >
                             <p className={`${drop2 && true ? 'text-blue-500' : ''} mt-3`}>
@@ -101,7 +101,7 @@ export default function index() {
                     </div>
                     <div>
                         <div
-                            className="flex justify-between mt-6 cursor-pointer"
+                            className="flex justify-between mt-2 cursor-pointer"
                             onClick={() => handleClick('4')}
                         >
                             <p className={`${drop3 && true ? 'text-blue-500' : ''} mt-3`}>
@@ -117,7 +117,7 @@ export default function index() {
                     </div>
                 </div>
             </div>
-            <div className=" bottom-0 w-full h-auto" dir="rtl">
+            <div className=" bottom-0 w-full h-auto">
                 <Footer />
             </div>
         </div>

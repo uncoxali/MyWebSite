@@ -8,6 +8,7 @@
         "/about": ["about"],
         "/question": ["question"],
         "/contact": ["contact"],
-        "/footer": ["footer"]
+        "/footer": ["footer"],
+        "/tariffs": ["tariffs"]
     }
 }

@@ -22,7 +22,9 @@ export default function index() {
             <div className="lg:mt-36 md:mt-72 xl:px-52 2xl:px-64 mt-16 p-2">
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
-                        <div className=" lg:w-full md:flex justify-center">
+                        <div
+                            className={` lg:w-full md:flex justify-center ${isRTL ? '' : 'ml-14'}`}
+                        >
                             <Footer_User className="-mt-16 lg:w-80 w-60 absolute" />
                         </div>
                     </div>
@@ -43,27 +45,27 @@ export default function index() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex mt-8 ">
+                                <div className="flex justify-between mt-8 ">
                                     <div className="">
                                         <p className="text-white text-xs">
                                             {isRTL ? 'نسخه ی اندروید' : 'Android Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
-                                            <GooglePlay className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
+                                            <GooglePlay className="ml-1" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
                                             <GooglePlay className="ml-2" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
                                             <GooglePlay className="ml-2" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
                                     </div>
@@ -72,22 +74,22 @@ export default function index() {
                                             {' '}
                                             {isRTL ? 'نسخه ی IOS' : 'IOS Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
                                             <AppleStore className="ml-2" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
                                             <AppleStore className="ml-2" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
                                             <AppleStore className="ml-2" />
                                             <p className="text-xs text-white ">
-                                                دریافت از google play
+                                                {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
                                     </div>
@@ -102,26 +104,26 @@ export default function index() {
             <div className="mt-10 px-10 lg:hidden md:hidden block">
                 <hr className="border-2 border-gray-300" />
                 <div className="mt-5">
-                    <p className="text-sm">لینک های مهم</p>
+                    <p className="text-sm">{isRTL ? 'لینک های مهم' : 'Important links'}</p>
                 </div>
                 <div className="flex justify-between mt-5" style={{ color: '#707A90' }}>
-                    <p className="text-xs">دانلود شاپیفای</p>
-                    <p className="text-xs">صفحه ی اصلی </p>
-                    <p className="text-xs">قوانین و مقررات</p>
+                    <p className="text-xs">{isRTL ? 'دانلود شاپیفای' : 'download Shopify'}</p>
+                    <p className="text-xs">{isRTL ? 'صفحه ی اصلی' : 'home page'} </p>
+                    <p className="text-xs">{isRTL ? 'قوانین و مقررات' : 'Terms and Conditions'}</p>
                 </div>
                 <div className="flex justify-start">
-                    <div className="flex text-xs mt-5 ">
-                        <p className="">پشتیبانی</p>
-                        <p className="mr-10">شبکه های اجتماعی</p>
+                    <div className="flex text-xs mt-6 ">
+                        <p className="">{isRTL ? 'پشتیبانی' : 'Support'}</p>
+                        <p className="mr-10">{isRTL ? 'شبکه های اجتماعی' : 'Social Networks'}</p>
                     </div>
                 </div>
                 <div className="mt-5 flex justify-between">
                     <div className="flex justify-center">
-                        <p className="text-xs mt-5" style={{ color: '#707A90' }}>
-                            گفتگو با پشتیبانی انلاین
+                        <p className="text-xs mt-2" style={{ color: '#707A90' }}>
+                            {isRTL ? 'گفتگو با پشتیبانی انلاین' : 'Chat with online support'}
                         </p>
                     </div>
-                    <div className="flex mt-3 justify-center">
+                    <div className="flex  justify-center">
                         <div className="w-10 h-10 rounded-full border border-gray-400 p-2 mr-3">
                             <Youtube />
                         </div>
@@ -139,16 +141,18 @@ export default function index() {
                 </div>
                 <div className="mt-5 flex justify-center">
                     <p className="text-xs text-center">
-                        © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.
+                        {isRTL
+                            ? '    © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.'
+                            : '© All material and intellectual rights of this site belong to Shapifa.'}
                     </p>
                 </div>
             </div>
 
             <div className="mt-20 px-48 lg:block md:block hidden">
                 <div className="flex justify-around text-xs">
-                    <p>پشتیبانی</p>
-                    <p>شبکه های اجتماعی</p>
-                    <p>لینک های مهم</p>
+                    <p className="">{isRTL ? 'پشتیبانی' : 'Support'}</p>
+                    <p>{isRTL ? 'شبکه های اجتماعی' : 'Social Networks'}</p>
+                    <p>{isRTL ? 'لینک های مهم' : 'Important links'}</p>
                 </div>
                 <div className="flex justify-around mt-10 text-xs">
                     <div className="flex">
@@ -168,17 +172,22 @@ export default function index() {
                             <Twitter />
                         </div>
                     </div>
-                    <p style={{ color: '#707A90' }}>گفتگو با پشتیبانی انلاین</p>
+                    <p style={{ color: '#707A90' }}>
+                        {' '}
+                        {isRTL ? 'گفتگو با پشتیبانی انلاین' : 'Chat with online support'}
+                    </p>
                     <div className="flex justify-around text-xs" style={{ color: '#707A90' }}>
-                        <p className="mr-5">دانلود شاپیفای</p>
-                        <p className="mr-5">صفحه ی اصلی </p>
-                        <p className="mr-5">قوانین و مقررات</p>
+                        <p className="mr-5">{isRTL ? 'دانلود شاپیفای' : 'download Shopify'}</p>
+                        <p className="mr-5">{isRTL ? 'صفحه ی اصلی' : 'home page'}</p>
+                        <p className="mr-5">{isRTL ? 'قوانین و مقررات' : 'Terms and Conditions'}</p>
                     </div>
                 </div>
                 <hr className="border-2 border-gray-200 bg-gray-200 mt-10" />
                 <div className="mt-7 flex justify-center ">
                     <p className="text-sm">
-                        © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.
+                        {isRTL
+                            ? '    © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.'
+                            : '© All material and intellectual rights of this site belong to Shapifa.'}
                     </p>
                 </div>
             </div>

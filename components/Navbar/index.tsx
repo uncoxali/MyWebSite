@@ -41,10 +41,6 @@ const Navbar: FC<Props> = ({ logo }) => {
         setMenu(false);
     };
     const { locale } = router;
-    const changeLanguage = () => {
-        if (locale === 'en') setDrop('fa');
-        if (locale === 'fa') setDrop('en');
-    };
 
     const { t, lang } = useTranslation();
     const isRTL = lang === 'fa' || lang === 'he';
@@ -63,15 +59,14 @@ const Navbar: FC<Props> = ({ logo }) => {
                     <div className="flex justify-between">
                         <div className="flex">
                             <div>
-                                <div onClick={changeLanguage}>
+                                <div>
                                     <Link href="/" locale="en">
-                                        <p>{t('EN')}</p>
+                                        <p>{isRTL ? 'FA' : 'EN'}</p>
                                     </Link>
                                 </div>
-
-                                <div onClick={changeLanguage}>
+                                <div>
                                     <Link href="/" locale="fa">
-                                        <p>{t('FA')}</p>
+                                        <p>{isRTL ? 'FA' : 'EN'}</p>
                                     </Link>
                                 </div>
                             </div>
@@ -115,11 +110,13 @@ const Navbar: FC<Props> = ({ logo }) => {
                         </div>
                         <div className="flex mt-3 left-5">
                             <div>
-                                <h5 className="font-bold text-green-550 mr-6">۳،۰۰۰</h5>
+                                <h5 className="font-bold text-green-550 mr-6">
+                                    {isRTL ? '۳،۰۰۰' : '3,000'}
+                                </h5>
                             </div>
                             <div>
                                 <button className="p-2 bg-green-550 text-white text-sm w-32 rounded-3xl -mt-3 mr-6">
-                                    ساخت لینک
+                                    {isRTL ? 'ساخت لینک' : 'Create Link'}
                                 </button>
                             </div>
                         </div>
@@ -134,13 +131,13 @@ const Navbar: FC<Props> = ({ logo }) => {
                 >
                     <div className="flex justify-center">
                         <div>
-                            <div onClick={changeLanguage}>
+                            <div>
                                 <Link href="/" locale="en">
                                     <p>{t('EN')}</p>
                                 </Link>
                             </div>
 
-                            <div onClick={changeLanguage}>
+                            <div>
                                 <Link href="/" locale="fa">
                                     <p>{t('FA')}</p>
                                 </Link>

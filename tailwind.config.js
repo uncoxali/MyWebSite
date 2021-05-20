@@ -85,6 +85,7 @@ module.exports = {
             width: {
                 'max-content': 'max-content',
                 '100': '45rem',
+                '42': '10.6rem',
             },
             maxWidth: {
                 '8xl': '1920px',

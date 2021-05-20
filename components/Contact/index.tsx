@@ -49,7 +49,7 @@ export default function index() {
                             }
                             className={` ${
                                 errors.email && 'border border-red-500 placeholder-red-500'
-                            } placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
+                            }  mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
                         />
                     </div>
                     <div className="mt-10">
@@ -64,7 +64,7 @@ export default function index() {
                             }
                             className={` ${
                                 errors.description && 'border border-red-500 placeholder-red-500'
-                            } placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
+                            }  mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200"`}
                         />
                     </div>
                     <div className="mt-10">
@@ -78,7 +78,7 @@ export default function index() {
                             }
                             className={` ${
                                 errors.textarea && 'border border-red-500 placeholder-red-500'
-                            } h-52 placeholder-black mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200`}
+                            } h-52  mt-2 p-5 lg:w-2/3 md:w-full w-full focus:outline-none focus:ring focus:border-blue-200`}
                         />
                     </div>
                     <div className="mt-7 relative">
@@ -108,7 +108,7 @@ export default function index() {
                             className="text-white font-bold p-3 lg:w-64 md:w-64 w-full"
                             style={{ backgroundColor: '#20AFFF' }}
                         >
-                            ثبت
+                            {isRTL ? 'ثبت' : 'send'}
                         </button>
                     </div>
                 </form>
