@@ -47,7 +47,7 @@ export default function index() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex justify-between mt-8 ">
+                                <div className="flex justify-between mt-8 " dir="rtl">
                                     <div className="">
                                         <p className="text-white text-xs">
                                             {isRTL ? 'نسخه ی اندروید' : 'Android Version'}
