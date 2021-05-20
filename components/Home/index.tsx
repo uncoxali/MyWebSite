@@ -580,7 +580,7 @@ export default function index() {
                         </Fade>
                     </div>
                 </div>
-                <div ref={div} className="" dir="rtl">
+                <div ref={div} className="">
                     <Footer />
                 </div>
             </div>

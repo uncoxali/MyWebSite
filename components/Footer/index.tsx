@@ -47,25 +47,25 @@ export default function index() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex justify-between mt-8 " dir="rtl">
+                                <div className="flex justify-between mt-8 ml-2">
                                     <div className="">
                                         <p className="text-white text-xs">
                                             {isRTL ? 'نسخه ی اندروید' : 'Android Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <GooglePlay className="ml-1" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                            <GooglePlay className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <GooglePlay className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                            <GooglePlay className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <GooglePlay className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                            <GooglePlay className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
@@ -76,20 +76,20 @@ export default function index() {
                                             {' '}
                                             {isRTL ? 'نسخه ی IOS' : 'IOS Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <AppleStore className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                            <AppleStore className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <AppleStore className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                            <AppleStore className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-42">
-                                            <AppleStore className="ml-2" />
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                            <AppleStore className="" />
                                             <p className="text-xs text-white ">
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
