@@ -510,7 +510,7 @@ export default function index() {
                             </Zoom>
                         </div>
                         <Fade>
-                            <div className="p-5 lg:mt-0 mt-44 lg:h-screen lg:flex justify-center">
+                            <div className="p-5 lg:mt-0 mt-64 lg:h-screen lg:flex justify-center ">
                                 <div className="lg:w-1/2 ">
                                     <Fade delay={400}>
                                         <div className="flex justify-center">
