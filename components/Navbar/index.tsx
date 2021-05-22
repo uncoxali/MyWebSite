@@ -59,7 +59,7 @@ const Navbar: FC<Props> = ({ logo }) => {
         >
             <div className={` relative lg:block md:block hidden`}>
                 <div
-                    className={` lg:px-20 md:px-14 p-5 fixed w-full top-0 z-10  ${
+                    className={` lg:px-20 md:px-14 p-5 fixed w-full top-0 z-10 bg-green-10 ${
                         screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
                     }`}
                 >
@@ -76,7 +76,7 @@ const Navbar: FC<Props> = ({ logo }) => {
                             <div className="flex mt-4 text-sm list">
                                 <div
                                     className={`lg:mr-12 md:mr-5 cursor-pointer ${
-                                        isRTL ? 'mr-5' : 'ml-10'
+                                        isRTL ? 'mr-2' : 'ml-2'
                                     } `}
                                 >
                                     <ActiveLink href="/question">
@@ -100,15 +100,15 @@ const Navbar: FC<Props> = ({ logo }) => {
                                         <p>{lang === 'fa' ? '  درباره ما' : 'About Us'}</p>
                                     </ActiveLink>
                                 </div>
-                                <select
-                                    className={`${
-                                        isRTL ? 'mr-10' : 'ml-2'
-                                    } bg-transparent -mt-3 outline-none`}
+                                <div
+                                    className={`${isRTL ? 'mr-10' : ''}`}
                                     onChange={(e: any) => handleChange(e)}
                                 >
-                                    <option value="EN">EN</option>
-                                    <option value="FA">FA</option>
-                                </select>
+                                    <select className="appearance-none bg-transparent outline-none ">
+                                        <option value="EN">EN</option>
+                                        <option value="FA">FA</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
 
@@ -119,7 +119,10 @@ const Navbar: FC<Props> = ({ logo }) => {
                                 </h5>
                             </div>
                             <div>
-                                <button className="p-2 bg-green-550 text-white text-sm w-32 rounded-3xl -mt-3 mr-6">
+                                <button
+                                    onClick={(e) => handleClick(e)}
+                                    className="p-2 bg-green-550 text-white text-sm w-32 rounded-3xl -mt-3 mr-6"
+                                >
                                     {isRTL ? 'ساخت لینک' : 'Create Link'}
                                 </button>
                             </div>
@@ -129,7 +132,7 @@ const Navbar: FC<Props> = ({ logo }) => {
             </div>
             <div className="lg:hidden md:hidden block">
                 <div
-                    className={` ${
+                    className={` bg-green-10 ${
                         screen > 50 ? 'shadow-xl bg-green-10' : 'bg-transparent'
                     } w-full h-20 top-0 fixed z-10`}
                 >
@@ -145,15 +148,29 @@ const Navbar: FC<Props> = ({ logo }) => {
                                 </Link>
                             </p>
                         </div>
-                        <select
-                            className={`${
+
+                        <div
+                            className={`${isRTL ? 'ml-10 mt-5' : 'mr-10 mt-5'}`}
+                            onChange={(e: any) => handleChange(e)}
+                        >
+                            <select className="appearance-none bg-transparent outline-none font-bold">
+                                <option value="EN">EN</option>
+                                <option value="FA">FA</option>
+                            </select>
+                        </div>
+                        {/* <select
+                            className={`bg-green-550 rounded-xl p-1 text-white ${
                                 isRTL ? 'ml-6' : 'mr-6'
                             } bg-transparent mt-6 outline-none`}
                             onChange={(e: any) => handleChange(e)}
                         >
-                            <option value="EN">EN</option>
-                            <option value="FA">FA</option>
-                        </select>
+                            <option className="text-white " value="EN">
+                                EN
+                            </option>
+                            <option className="text-white " value="FA">
+                                FA
+                            </option>
+                        </select> */}
                     </div>
                 </div>
             </div>
@@ -199,7 +216,7 @@ const Navbar: FC<Props> = ({ logo }) => {
                                     className="text-white bg-green-550 p-2 w-full mt-5 "
                                     onClick={(e) => handleClick(e)}
                                 >
-                                    دانلود شاپیفای
+                                    {isRTL ? ' دانلود شاپیفای' : 'Download Shopify'}
                                 </button>
                             </div>
                             <div className="flex mt-10 justify-center">

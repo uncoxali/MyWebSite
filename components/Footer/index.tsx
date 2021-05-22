@@ -23,7 +23,7 @@ export default function index() {
                 <div className=" lg:flex rounded-3xl lg:h-80 md:h-auto h-auto bg-blue-40 lg:px-20 md:p-5">
                     <div className="h-80 lg:w-1/2 blue-500 lg:px-0 px-10 lg:-mr-24">
                         <div
-                            className={` lg:w-full md:flex justify-center ${
+                            className={` lg:w-full md:flex lg:flex-none flex justify-center ${
                                 isRTL ? 'mr-5' : 'ml-14'
                             }`}
                         >
@@ -33,10 +33,10 @@ export default function index() {
                     <div
                         className={`lg:flex md:flex flex justify-center lg:mr-10 w-full lg:justify-start px-5`}
                     >
-                        <div className={`${isRTL ? '' : 'lg:ml-52 md:ml-48'} flex`}>
+                        <div className={`${isRTL ? '' : 'lg:ml-52 md:ml-48 ml-3'} flex`}>
                             <div className="lg:w-1/2 lg:h-80">
                                 <div className="px-3">
-                                    <p className="text-lg text-white mt-3">
+                                    <p className="text-lg text-white mt-3 font-bold">
                                         {isRTL ? 'همین حالا دانلود کنید' : 'Download now'}
                                     </p>
                                     <div className="lg:w-80">
@@ -47,50 +47,82 @@ export default function index() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex justify-between mt-8 ml-2">
+                                <div className={`flex justify-between mt-8 `}>
                                     <div className="">
-                                        <p className="text-white text-xs">
+                                        <p
+                                            className={`${
+                                                isRTL ? 'mr-3' : 'ml-0'
+                                            } text-white text-xs`}
+                                        >
                                             {isRTL ? 'نسخه ی اندروید' : 'Android Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-3">
                                             <GooglePlay className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-1 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-3">
                                             <GooglePlay className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-2 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-3">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-3">
                                             <GooglePlay className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-2 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
                                     </div>
                                     <div className="lg:mr-10 mr-2">
-                                        <p className="text-white text-xs">
+                                        <p
+                                            className={`${
+                                                isRTL ? 'mr-2' : 'ml-0'
+                                            } text-white text-xs`}
+                                        >
                                             {' '}
                                             {isRTL ? 'نسخه ی IOS' : 'IOS Version'}
                                         </p>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-1">
                                             <AppleStore className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-2 mt-1ml-2 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-1">
                                             <AppleStore className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-2 mt-1ml-2 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>
-                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-40 mr-1">
+                                        <div className="border border-white lg:p-2 md:p-2 p-1 flex items-center mt-3 lg:w-48 w-44 mr-1">
                                             <AppleStore className="" />
-                                            <p className="text-xs text-white ">
+                                            <p
+                                                className={`${
+                                                    isRTL ? 'mr-2' : 'ml-2 mt-1'
+                                                } text-xs text-white `}
+                                            >
                                                 {isRTL ? 'دریافت از' : 'Download'} google play
                                             </p>
                                         </div>

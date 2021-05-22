@@ -171,7 +171,7 @@ export default function index() {
                                                 page == 'p1'
                                                     ? 'bg-green-550 text-white'
                                                     : 'bg-white text-black'
-                                            }  ${isRTL ? '' : 'ml-10'}`,
+                                            }  ${isRTL ? '' : 'ml-5'}`,
                                         )}
                                     >
                                         2
@@ -211,7 +211,7 @@ export default function index() {
 
                     <Fade delay={500}>
                         <div className="lg:overflow-hidden md:overflow-hidden lg:flex justify-center overflow-x-auto px-5 mt-5 p-5">
-                            <div className="flex justify-between lg:w-full lg:px-52 md:px-44 md:w-full w-100 ml-10 overflow-hidden">
+                            <div className="flex justify-center lg:w-full lg:px-52 md:px-44 md:w-full w-100 ml-10">
                                 <div className="">
                                     <div
                                         className={cn(
@@ -305,7 +305,9 @@ export default function index() {
                                     </div>
                                     <div className="ml-3 mt-2">
                                         <p className="">{t('home:h4')}</p>
-                                        <p className="text-xs mr-3 opacity-60">{t('home:h4')}</p>
+                                        <p className="text-xs mr-3 opacity-60 mt-2">
+                                            {t('home:h4')}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -427,11 +429,11 @@ export default function index() {
                         </div>
                     </Fade>
                     <div
-                        className={` lg:px-28 lg:mt-5 md:mt-5 -mt-52`}
+                        className={` lg:px-32 lg:mt-5 md:mt-5 -mt-52`}
                         style={{ direction: 'rtl' }}
                     >
-                        <div className="flex px-3">
-                            <div className="w-1/2 lg:px-20 p-3">
+                        <div className="flex px-3 mt-10">
+                            <div className="w-1/2 lg:px-14 p-3  lg:mr-5">
                                 <div className="flex justify-center">
                                     <p className="lg:text-lg text-xs font-bold text-green-550">
                                         {t('home:h9')}
@@ -444,7 +446,7 @@ export default function index() {
                                     <Tik />
                                 </div>
                             </div>
-                            <div className="w-1/2 lg:px-20 p-3 ">
+                            <div className="w-1/2 lg:px-14  p-3 lg:ml-16">
                                 <div className="flex justify-center">
                                     <p className="lg:text-lg text-xs font-bold text-indigo-400">
                                         {t('home:h10')}
@@ -519,7 +521,7 @@ export default function index() {
                                             </div>
                                             <div className="rounded-l-3xl bg-white w-auto h-auto">
                                                 <div className="flex justify-center">
-                                                    <p className="mt-3 text-sm font-bold text-gray-700">
+                                                    <p className="mt-5 text-sm font-bold text-gray-700">
                                                         {t('home:h2')}
                                                     </p>
                                                 </div>
@@ -538,7 +540,7 @@ export default function index() {
                                         <div className="flex justify-center -mt-5">
                                             <div className="rounded-r-3xl bg-white w-auto  h-auto">
                                                 <div className="flex justify-center">
-                                                    <p className="mt-3 text-sm font-bold text-gray-700">
+                                                    <p className="mt-5 text-sm font-bold text-gray-700">
                                                         {t('home:h2')}
                                                     </p>
                                                 </div>
@@ -563,7 +565,7 @@ export default function index() {
                                             </div>
                                             <div className="rounded-l-3xl bg-white w-au h-auto">
                                                 <div className="flex justify-center">
-                                                    <p className="mt-3 text-sm font-bold text-gray-700">
+                                                    <p className="mt-5 text-sm font-bold text-gray-700">
                                                         {t('home:h2')}
                                                     </p>
                                                 </div>

@@ -63,7 +63,7 @@ export default function index() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p className="text-white text-center mt-10 font-bold">
+                                                    <p className="text-white text-center mt-10 font-bold px-3">
                                                         {t('tariffs:p')}
                                                     </p>
                                                 </div>
@@ -105,7 +105,7 @@ export default function index() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p className="text-white text-center mt-10 font-bold">
+                                                    <p className="text-white text-center mt-10 font-bold px-3">
                                                         {t('tariffs:p')}
                                                     </p>
                                                 </div>
@@ -149,7 +149,7 @@ export default function index() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p className="text-white text-center mt-10 font-bold">
+                                                    <p className="text-white text-center mt-10 font-bold px-3">
                                                         {t('tariffs:p')}
                                                     </p>
                                                 </div>
@@ -191,7 +191,7 @@ export default function index() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p className="text-white text-center mt-10 font-bold">
+                                                    <p className="text-white text-center mt-10 font-bold px-3">
                                                         {t('tariffs:p')}
                                                     </p>
                                                 </div>
@@ -231,14 +231,18 @@ export default function index() {
                                                         >
                                                             {t('tariffs:h2')}
                                                         </button>
-                                                        <div className="mt-5 mr-3">
-                                                            <p className="text-3xl text-white font-bold">
+                                                        <div className={`mt-5 mr-3 `}>
+                                                            <p
+                                                                className={`${
+                                                                    isRTL ? '' : 'mr-2'
+                                                                } text-3xl text-white font-bold `}
+                                                            >
                                                                 {t('tariffs:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p className="text-white text-center mt-10 font-bold">
+                                                <p className="text-white text-center mt-10 font-bold px-3">
                                                     {t('tariffs:p')}
                                                 </p>
                                             </div>
@@ -265,20 +269,24 @@ export default function index() {
                                                     <div className="-mt-8">
                                                         <button
                                                             className={cn(
-                                                                Style.btnColor,
                                                                 'border border-red-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                             )}
+                                                            style={{ color: '#F6A27E' }}
                                                         >
                                                             {t('tariffs:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
-                                                            <p className="text-3xl text-white font-bold">
+                                                            <p
+                                                                className={`text-3xl text-white font-bold ${
+                                                                    isRTL ? '' : 'mr-2'
+                                                                }`}
+                                                            >
                                                                 {t('tariffs:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p className="text-white text-center mt-10 font-bold">
+                                                <p className="text-white text-center mt-10 font-bold px-3">
                                                     {t('tariffs:p')}
                                                 </p>
                                             </div>
@@ -305,20 +313,24 @@ export default function index() {
                                                     <div className="-mt-8">
                                                         <button
                                                             className={cn(
-                                                                Style.btnColor,
                                                                 'border border-gray-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                             )}
+                                                            style={{ color: '#8A8E96' }}
                                                         >
                                                             {t('tariffs:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
-                                                            <p className="text-3xl text-white font-bold">
+                                                            <p
+                                                                className={`text-3xl text-white font-bold ${
+                                                                    isRTL ? '' : 'mr-2'
+                                                                }`}
+                                                            >
                                                                 {t('tariffs:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p className="text-white text-center mt-10 font-bold">
+                                                <p className="text-white text-center mt-10 font-bold px-3">
                                                     {t('tariffs:p')}
                                                 </p>
                                             </div>
@@ -345,20 +357,24 @@ export default function index() {
                                                     <div className="-mt-8">
                                                         <button
                                                             className={cn(
-                                                                Style.btnColor,
                                                                 'border border-yellow-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                             )}
+                                                            style={{ color: '#F3C56D' }}
                                                         >
                                                             {t('tariffs:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
-                                                            <p className="text-3xl text-white font-bold">
+                                                            <p
+                                                                className={`text-3xl text-white font-bold ${
+                                                                    isRTL ? '' : 'mr-2'
+                                                                }`}
+                                                            >
                                                                 {t('tariffs:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p className="text-white text-center mt-10 font-bold">
+                                                <p className="text-white text-center mt-10 font-bold px-3">
                                                     {t('tariffs:p')}
                                                 </p>
                                             </div>
@@ -376,11 +392,10 @@ export default function index() {
                 <div className="bg-green-10">
                     <div className="lg:h-0 md:h-screen h-screen "></div>
                     <div className="lg:h-0 md:h-screen h-screen "></div>
-                    <div className="lg:h-0 md:h-0 h-72 "></div>
+                    <div className="lg:h-0 md:h-52 h-52 "></div>
                     <div className=" bottom-0 w-full h-auto">
                         <Footer />
                     </div>
-                    <div className="bg-green-10 lg:h-0 md:h-0 h-80"></div>
                 </div>
             </div>
         </>
