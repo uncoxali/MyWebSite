@@ -9,6 +9,6 @@
         "/question": ["question"],
         "/contact": ["contact"],
         "/footer": ["footer"],
-        "/tariffs": ["tariffs"]
+        "/prising": ["prising"]
     }
 }

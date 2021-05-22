@@ -85,7 +85,7 @@ const Navbar: FC<Props> = ({ logo }) => {
                                 </div>
 
                                 <div className={`lg:mr-12 md:mr-5 cursor-pointer `}>
-                                    <ActiveLink href="/tariffs">
+                                    <ActiveLink href="/prising">
                                         <p>{lang === 'fa' ? ' تعرفه ها' : 'Pricing'}</p>
                                     </ActiveLink>
                                 </div>
@@ -113,11 +113,11 @@ const Navbar: FC<Props> = ({ logo }) => {
                         </div>
 
                         <div className="flex mt-3 left-5">
-                            <div>
+                            {/* <div>
                                 <h5 className="font-bold text-green-550 mr-6">
                                     {isRTL ? '۳،۰۰۰' : '3,000'}
                                 </h5>
-                            </div>
+                            </div> */}
                             <div>
                                 <button
                                     onClick={(e) => handleClick(e)}
@@ -182,7 +182,7 @@ const Navbar: FC<Props> = ({ logo }) => {
                                     </ActiveLink>
                                 </li>
                                 <li className="mt-5">
-                                    <ActiveLink href="/tariffs">
+                                    <ActiveLink href="/prising">
                                         <p>{lang === 'fa' ? ' تعرفه ها' : 'Pricing'}</p>
                                     </ActiveLink>
                                 </li>

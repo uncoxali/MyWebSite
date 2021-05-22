@@ -53,7 +53,7 @@ export default function index() {
                     </div>
                     <div>
                         <div
-                            className="flex justify-between mt-14  cursor-pointer"
+                            className="flex justify-between mt-10  cursor-pointer"
                             onClick={() => handleClick('1')}
                         >
                             <p className={`${drop && true ? 'text-blue-500' : ''} mt-3`}>

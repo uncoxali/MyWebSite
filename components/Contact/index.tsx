@@ -32,7 +32,7 @@ export default function index() {
             <Navbar />
             <div className="h-scree w-full lg:px-40 md:px-36 px-5">
                 <div className="">
-                    <p className="mt-36 font-bold" style={{ color: '#4c5364' }}>
+                    <p className="mt-32 font-bold text-2xl" style={{ color: '#4c5364' }}>
                         {t('contact:title')}
                     </p>
                 </div>

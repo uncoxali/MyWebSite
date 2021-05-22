@@ -1,10 +1,10 @@
 import React from 'react';
-import Tariffs from '@components/Tariffs';
+import Pricing from '@components/Pricing';
 
 export default function index() {
     return (
         <div>
-            <Tariffs />
+            <Pricing />
         </div>
     );
 }

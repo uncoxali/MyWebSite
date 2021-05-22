@@ -26,7 +26,7 @@ export default function index() {
                     <div className="h-screen w-full lg:px-32 md:px-10 px-5">
                         <div className="" dir={isRTL ? 'rtl' : 'ltr'}>
                             <p className={cn(Style.text, 'font-bold mt-32 text-2xl')}>
-                                {t('tariffs:title')}
+                                {t('prising:title')}
                             </p>
                         </div>
                         <div className="lg:hidden md:block hidden">
@@ -36,7 +36,7 @@ export default function index() {
                                         <div className="w-75 h-90 border-2 border-primary rounded-2xl ">
                                             <div className="flex justify-center mt-3">
                                                 <p className={cn(Style.text, 'font-bold')}>
-                                                    {t('tariffs:h5')}
+                                                    {t('prising:h5')}
                                                 </p>
                                             </div>
                                             <div className="flex justify-center mt-7">
@@ -54,17 +54,17 @@ export default function index() {
                                                                     'border border-primary bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                                 )}
                                                             >
-                                                                {t('tariffs:h2')}
+                                                                {t('prising:h2')}
                                                             </button>
                                                             <div className="mt-5 mr-3">
                                                                 <p className="text-3xl text-white font-bold">
-                                                                    {t('tariffs:h3')}
+                                                                    {t('prising:h3')}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <p className="text-white text-center mt-10 font-bold px-3">
-                                                        {t('tariffs:p')}
+                                                        {t('prising:p')}
                                                     </p>
                                                 </div>
                                             </div>
@@ -78,7 +78,7 @@ export default function index() {
                                         <div className="w-75 h-90 border-2 border-red-10 rounded-2xl">
                                             <div className="flex justify-center mt-3">
                                                 <p className={cn(Style.text, 'font-bold')}>
-                                                    {t('tariffs:h5')}
+                                                    {t('prising:h5')}
                                                 </p>
                                             </div>
                                             <div className="flex justify-center mt-7">
@@ -96,17 +96,17 @@ export default function index() {
                                                                     'border border-red-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                                 )}
                                                             >
-                                                                {t('tariffs:h2')}
+                                                                {t('prising:h2')}
                                                             </button>
                                                             <div className="mt-5 mr-3">
                                                                 <p className="text-3xl text-white font-bold">
-                                                                    {t('tariffs:h3')}
+                                                                    {t('prising:h3')}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <p className="text-white text-center mt-10 font-bold px-3">
-                                                        {t('tariffs:p')}
+                                                        {t('prising:p')}
                                                     </p>
                                                 </div>
                                             </div>
@@ -122,7 +122,7 @@ export default function index() {
                                         <div className="w-75 h-90 border-2 border-gray-10 rounded-2xl">
                                             <div className="flex justify-center mt-3">
                                                 <p className={cn(Style.text, 'font-bold')}>
-                                                    {t('tariffs:h5')}
+                                                    {t('prising:h5')}
                                                 </p>
                                             </div>
                                             <div className="flex justify-center mt-7">
@@ -140,17 +140,17 @@ export default function index() {
                                                                     'border border-gray-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                                 )}
                                                             >
-                                                                {t('tariffs:h2')}
+                                                                {t('prising:h2')}
                                                             </button>
                                                             <div className="mt-5 mr-3">
                                                                 <p className="text-3xl text-white font-bold">
-                                                                    {t('tariffs:h3')}
+                                                                    {t('prising:h3')}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <p className="text-white text-center mt-10 font-bold px-3">
-                                                        {t('tariffs:p')}
+                                                        {t('prising:p')}
                                                     </p>
                                                 </div>
                                             </div>
@@ -164,7 +164,7 @@ export default function index() {
                                         <div className="w-75 h-90 border-2 border-yellow-10 rounded-2xl">
                                             <div className="flex justify-center mt-3">
                                                 <p className={cn(Style.text, 'font-bold')}>
-                                                    {t('tariffs:h5')}
+                                                    {t('prising:h5')}
                                                 </p>
                                             </div>
                                             <div className="flex justify-center mt-7">
@@ -182,17 +182,17 @@ export default function index() {
                                                                     'border border-yellow-10 bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                                 )}
                                                             >
-                                                                {t('tariffs:h2')}
+                                                                {t('prising:h2')}
                                                             </button>
                                                             <div className="mt-5 mr-3">
                                                                 <p className="text-3xl text-white font-bold">
-                                                                    {t('tariffs:h3')}
+                                                                    {t('prising:h3')}
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <p className="text-white text-center mt-10 font-bold px-3">
-                                                        {t('tariffs:p')}
+                                                        {t('prising:p')}
                                                     </p>
                                                 </div>
                                             </div>
@@ -211,7 +211,7 @@ export default function index() {
                                     <div className="w-75 h-90 border-2 border-primary rounded-2xl ">
                                         <div className="flex justify-center mt-3">
                                             <p className={cn(Style.text, 'font-bold')}>
-                                                {t('tariffs:h5')}
+                                                {t('prising:h5')}
                                             </p>
                                         </div>
                                         <div className="flex justify-center mt-7">
@@ -229,7 +229,7 @@ export default function index() {
                                                                 'border border-primary bg-green-10 p-3 rounded-2xl  text-2xl ml-3',
                                                             )}
                                                         >
-                                                            {t('tariffs:h2')}
+                                                            {t('prising:h2')}
                                                         </button>
                                                         <div className={`mt-5 mr-3 `}>
                                                             <p
@@ -237,13 +237,13 @@ export default function index() {
                                                                     isRTL ? '' : 'mr-2'
                                                                 } text-3xl text-white font-bold `}
                                                             >
-                                                                {t('tariffs:h3')}
+                                                                {t('prising:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <p className="text-white text-center mt-10 font-bold px-3">
-                                                    {t('tariffs:p')}
+                                                    {t('prising:p')}
                                                 </p>
                                             </div>
                                         </div>
@@ -273,7 +273,7 @@ export default function index() {
                                                             )}
                                                             style={{ color: '#F6A27E' }}
                                                         >
-                                                            {t('tariffs:h2')}
+                                                            {t('prising:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
                                                             <p
@@ -281,13 +281,13 @@ export default function index() {
                                                                     isRTL ? '' : 'mr-2'
                                                                 }`}
                                                             >
-                                                                {t('tariffs:h3')}
+                                                                {t('prising:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <p className="text-white text-center mt-10 font-bold px-3">
-                                                    {t('tariffs:p')}
+                                                    {t('prising:p')}
                                                 </p>
                                             </div>
                                         </div>
@@ -317,7 +317,7 @@ export default function index() {
                                                             )}
                                                             style={{ color: '#8A8E96' }}
                                                         >
-                                                            {t('tariffs:h2')}
+                                                            {t('prising:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
                                                             <p
@@ -325,13 +325,13 @@ export default function index() {
                                                                     isRTL ? '' : 'mr-2'
                                                                 }`}
                                                             >
-                                                                {t('tariffs:h3')}
+                                                                {t('prising:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <p className="text-white text-center mt-10 font-bold px-3">
-                                                    {t('tariffs:p')}
+                                                    {t('prising:p')}
                                                 </p>
                                             </div>
                                         </div>
@@ -361,7 +361,7 @@ export default function index() {
                                                             )}
                                                             style={{ color: '#F3C56D' }}
                                                         >
-                                                            {t('tariffs:h2')}
+                                                            {t('prising:h2')}
                                                         </button>
                                                         <div className="mt-5 mr-3">
                                                             <p
@@ -369,13 +369,13 @@ export default function index() {
                                                                     isRTL ? '' : 'mr-2'
                                                                 }`}
                                                             >
-                                                                {t('tariffs:h3')}
+                                                                {t('prising:h3')}
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <p className="text-white text-center mt-10 font-bold px-3">
-                                                    {t('tariffs:p')}
+                                                    {t('prising:p')}
                                                 </p>
                                             </div>
                                         </div>

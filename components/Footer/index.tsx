@@ -47,7 +47,7 @@ export default function index() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className={`flex justify-between mt-8 `}>
+                                <div className={`flex justify-between mt-6 `}>
                                     <div className="">
                                         <p
                                             className={`${
@@ -221,7 +221,7 @@ export default function index() {
                     <p className="text-sm">
                         {isRTL
                             ? '    © تمامی حقوق مادی و معنوی این سایت متعلق شاپیفای می باشد.'
-                            : '© All material and intellectual rights of this site belong to Shapifa.'}
+                            : '© All material and intellectual rights of this site belong to Shopify'}
                     </p>
                 </div>
             </div>

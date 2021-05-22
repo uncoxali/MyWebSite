@@ -211,7 +211,7 @@ export default function index() {
 
                     <Fade delay={500}>
                         <div className="lg:overflow-hidden md:overflow-hidden lg:flex justify-center overflow-x-auto px-5 mt-5 p-5">
-                            <div className="flex justify-center lg:w-full lg:px-52 md:px-44 md:w-full w-100 ml-10">
+                            <div className="flex justify-center lg:w-full lg:px-52 md:px-44 md:w-full w-100 items-center">
                                 <div className="">
                                     <div
                                         className={cn(

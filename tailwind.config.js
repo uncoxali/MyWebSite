@@ -86,6 +86,13 @@ module.exports = {
                 'max-content': 'max-content',
                 '100': '45rem',
                 '42': '10.6rem',
+                '25': '6.5rem',
+            },
+            height: {
+                'max-content': 'max-content',
+                '100': '45rem',
+                '42': '10.6rem',
+                '25': '6.5rem',
             },
             maxWidth: {
                 '8xl': '1920px',
