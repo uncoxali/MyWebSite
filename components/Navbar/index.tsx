@@ -153,24 +153,11 @@ const Navbar: FC<Props> = ({ logo }) => {
                             className={`${isRTL ? 'ml-10 mt-5' : 'mr-10 mt-5'}`}
                             onChange={(e: any) => handleChange(e)}
                         >
-                            <select className="appearance-none bg-transparent outline-none font-bold">
+                            <select className="appearance-none bg-transparent outline-none font-bold opacity-75">
                                 <option value="EN">EN</option>
                                 <option value="FA">FA</option>
                             </select>
                         </div>
-                        {/* <select
-                            className={`bg-green-550 rounded-xl p-1 text-white ${
-                                isRTL ? 'ml-6' : 'mr-6'
-                            } bg-transparent mt-6 outline-none`}
-                            onChange={(e: any) => handleChange(e)}
-                        >
-                            <option className="text-white " value="EN">
-                                EN
-                            </option>
-                            <option className="text-white " value="FA">
-                                FA
-                            </option>
-                        </select> */}
                     </div>
                 </div>
             </div>
